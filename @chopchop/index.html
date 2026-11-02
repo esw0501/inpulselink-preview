@@ -23,7 +23,7 @@
     d.classList.add('motion');
     setTimeout(function () { if (!window.__motion) d.classList.remove('motion'); }, 2500);   // 스크립트가 못 뜨면 숨긴 것 되돌림
     // 홈 첫 방문(7일에 한 번)이면 인트로 영상부터. ?intro=1 이면 항상
-    if (location.pathname === '/') {
+    if (location.pathname === '/inpulselink-preview/') {
       var seen = 0;
       try { seen = +localStorage.getItem('il-intro') || 0; } catch (e) {}
       if (/[?&]intro=1/.test(location.search) || Date.now() - seen > 7 * 864e5) {
@@ -106,7 +106,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" defer></script>
 <script src="/inpulselink-preview/assets/intro.js?v=2" defer></script>
 <script src="/inpulselink-preview/assets/motion.js?v=9" defer></script>
-<div class="pv-note" style="position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9999;background:#21201c;color:#fdfdfc;font:600 13px/1.4 Pretendard,system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:calc(100vw - 32px);text-align:center">미리보기 화면입니다 · 로그인·신청·결제는 동작하지 않아요</div>
+<div class="pv-note" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#21201c;color:#fdfdfc;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:calc(100vw - 32px)">미리보기 · 로그인·신청은 동작하지 않아요<button type="button" aria-label="닫기" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;border-radius:50%;background:#bdee63;color:#21201c;text-align:center;line-height:22px;font-weight:800">×</button></div>
 <script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 로그인·신청·결제가 동작하지 않아요.');},true);</script>
 </body>
 </html>
