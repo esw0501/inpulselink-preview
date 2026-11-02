@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>인플루언서 | 인펄스링크</title>
+<meta name="description" content="브랜드와 인플루언서를 연결하는 인플루언서 마케팅 플랫폼">
+<meta property="og:title" content="인플루언서 | 인펄스링크">
+<meta property="og:description" content="브랜드와 인플루언서를 연결하는 인플루언서 마케팅 플랫폼">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="인펄스링크">
+<link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=14">
+<script>
+/* 첫 그림 전에 테마·모션 결정(깜빡임 방지). 기본은 밝게, 고른 값은 이 브라우저에만 저장 */
+(function () {
+  var d = document.documentElement, t = 'light';
+  try { t = localStorage.getItem('il-theme') || 'light'; } catch (e) {}
+  d.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  if (!window.matchMedia || !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    d.classList.add('motion');
+    setTimeout(function () { if (!window.__motion) d.classList.remove('motion'); }, 2500);   // 스크립트가 못 뜨면 숨긴 것 되돌림
+    // 홈 첫 방문(7일에 한 번)이면 인트로 영상부터. ?intro=1 이면 항상
+    if (location.pathname === '/') {
+      var seen = 0;
+      try { seen = +localStorage.getItem('il-intro') || 0; } catch (e) {}
+      if (/[?&]intro=1/.test(location.search) || Date.now() - seen > 7 * 864e5) {
+        d.classList.add('intro-on');
+        setTimeout(function () { if (!window.__intro) d.classList.remove('intro-on'); }, 4000);   // intro.js가 못 뜨면 걷어 냄
+      }
+    }
+  }
+})();
+</script>
+</head>
+<body>
+<header class="hd">
+  <div class="wrap">
+    <a class="logo" href="/inpulselink-preview/inpulselink-preview/"><i>in</i>인펄스링크</a>
+    <nav class="gnb">
+              <a href="/inpulselink-preview/inpulselink-preview/campaigns/" class="">캠페인</a>
+              <a href="/inpulselink-preview/inpulselink-preview/influencers/" class="on">인플루언서</a>
+              <a href="/inpulselink-preview/inpulselink-preview/market/" class="">마켓</a>
+              <a href="/inpulselink-preview/inpulselink-preview/feed/" class="">실시간 콘텐츠</a>
+          </nav>
+    <div class="hd-right">
+      <button class="theme-tg" type="button" data-theme-toggle aria-label="밝게/어둡게 전환" title="밝게/어둡게 전환">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+              <a class="btn btn-sm" href="/inpulselink-preview/inpulselink-preview/login/">로그인</a>
+        <a class="btn btn-sm btn-pri" href="/inpulselink-preview/inpulselink-preview/signup/">회원가입</a>
+          </div>
+  </div>
+  <nav class="mnav">
+          <a href="/inpulselink-preview/inpulselink-preview/campaigns/" class="">캠페인</a>
+          <a href="/inpulselink-preview/inpulselink-preview/influencers/" class="on">인플루언서</a>
+          <a href="/inpulselink-preview/inpulselink-preview/market/" class="">마켓</a>
+          <a href="/inpulselink-preview/inpulselink-preview/feed/" class="">실시간 콘텐츠</a>
+      </nav>
+  <div class="scroll-bar" aria-hidden="true"></div>
+</header>
+<main><div class="wrap">
+  <div class="page-hd"><h1>인플루언서</h1><p>분야·채널로 찾아보고, 공개 페이지에서 포트폴리오와 판매 서비스를 확인하세요.</p></div>
+  <div class="fl-group">
+    <div class="fl-row"><span class="fl-label">분야</span>
+      <a class="chip on" href="/inpulselink-preview/inpulselink-preview/influencers/">전체</a>
+      <a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=beauty">뷰티</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=fashion">패션</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=food">맛집·푸드</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=living">리빙·인테리어</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=travel">여행·숙소</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=kids">육아·키즈</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=pet">반려동물</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=health">건강·운동</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=tech">디지털·가전</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?category=etc">기타</a>    </div>
+    <div class="fl-row"><span class="fl-label">채널</span>
+      <a class="chip on" href="/inpulselink-preview/inpulselink-preview/influencers/">전체</a>
+      <a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?channel=instagram">인스타그램</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?channel=blog">네이버 블로그</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?channel=youtube">유튜브</a><a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?channel=tiktok">틱톡</a>    </div>
+    <div class="fl-row"><span class="fl-label">보기</span>
+      <a class="chip on" href="/inpulselink-preview/inpulselink-preview/influencers/">최근 활동순</a>
+      <a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?sort=followers">팔로워순</a>
+      <a class="chip " href="/inpulselink-preview/inpulselink-preview/influencers/?verified=1">✓ 인증만</a>
+      <span style="flex:1"></span>
+      <form method="get" action="/inpulselink-preview/inpulselink-preview/influencers/"><input type="search" name="q" class="in" value="" placeholder="이름·소개 검색" style="height:36px;border-radius:999px;width:220px"></form>
+    </div>
+  </div>
+      <div class="grid g5"><a class="ic" href="/inpulselink-preview/inpulselink-preview/@sohyunguide/">
+  <span class="av av1 av-lg" aria-hidden="true">소</span>  <div class="nm">소현가이드 </div>
+  <div class="hd2">@sohyunguide</div>
+  <div class="bio">서울 실내 데이트 가이드</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">2.6만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@niohae/">
+  <span class="av av2 av-lg" aria-hidden="true">니</span>  <div class="nm">니오해 </div>
+  <div class="hd2">@niohae</div>
+  <div class="bio">꽃과 공간</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span>    <span class="bdg">4,300</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@chopchop/">
+  <span class="av av2 av-lg" aria-hidden="true">쵭</span>  <div class="nm">쵭쵭 </div>
+  <div class="hd2">@chopchop</div>
+  <div class="bio">건강 정보 쇼츠</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">유튜브</span>    <span class="bdg">5.2만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@jaenigolf/">
+  <span class="av av1 av-lg" aria-hidden="true">째</span>  <div class="nm">째니골프 </div>
+  <div class="hd2">@jaenigolf</div>
+  <div class="bio">골프·여행</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span>    <span class="bdg">6,400</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@ramjui99/">
+  <span class="av av3 av-lg" aria-hidden="true">람</span>  <div class="nm">람쥐99 </div>
+  <div class="hd2">@ramjui99</div>
+  <div class="bio">40kg 감량 후 관리 일기</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">틱톡</span>    <span class="bdg">3.1만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@bandal/">
+  <span class="av av0 av-lg" aria-hidden="true">반</span>  <div class="nm">반달토끼 </div>
+  <div class="hd2">@bandal</div>
+  <div class="bio">책 읽고 기록해요</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">1.3만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@taerist/">
+  <span class="av av3 av-lg" aria-hidden="true">태</span>  <div class="nm">태리스트 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@taerist</div>
+  <div class="bio">작은 집 인테리어</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">2.3만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@kunkon/">
+  <span class="av av2 av-lg" aria-hidden="true">쿤</span>  <div class="nm">쿤콘 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@kunkon</div>
+  <div class="bio">제주 아이랑 갈 만한 곳</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span>    <span class="bdg">1.5만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@seoyeon_hike/">
+  <span class="av av1 av-lg" aria-hidden="true">서</span>  <div class="nm">서연 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@seoyeon_hike</div>
+  <div class="bio">주말마다 산에 갑니다</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">7,100</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@kkongs/">
+  <span class="av av0 av-lg" aria-hidden="true">꽁</span>  <div class="nm">꽁스 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@kkongs</div>
+  <div class="bio">을지로·성수 데이트 코스</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span>    <span class="bdg">9,800</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@hyericane/">
+  <span class="av av2 av-lg" aria-hidden="true">혜</span>  <div class="nm">혜리케인 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@hyericane</div>
+  <div class="bio">민감성 피부 스킨케어 리뷰</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">유튜브</span>    <span class="bdg">4.1만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@dalnim/">
+  <span class="av av2 av-lg" aria-hidden="true">달</span>  <div class="nm">달님이네 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@dalnim</div>
+  <div class="bio">동네 빵집·카페 탐방, 두 아이 엄마</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">8,900</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@yulmune/">
+  <span class="av av2 av-lg" aria-hidden="true">율</span>  <div class="nm">율무네 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@yulmune</div>
+  <div class="bio">골든리트리버 율무와 사는 집</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span>    <span class="bdg">2.9만</span>  </div>
+</a>
+<a class="ic" href="/inpulselink-preview/inpulselink-preview/@mingmini/">
+  <span class="av av0 av-lg" aria-hidden="true">밍</span>  <div class="nm">밍밍미니 <span class="verified" title="인증 인플루언서">✓</span></div>
+  <div class="hd2">@mingmini</div>
+  <div class="bio">뷰티·살림 기록하는 30대 직장인</div>
+  <div class="badges" style="justify-content:center">
+    <span class="bdg bdg-line">인스타그램</span><span class="bdg bdg-line">네이버 블로그</span>    <span class="bdg">1.2만</span>  </div>
+</a>
+</div>
+    <div class="pager">
+          </div>
+</div>
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <nav><a href="/inpulselink-preview/inpulselink-preview/guide/">이용 안내</a><a href="/inpulselink-preview/inpulselink-preview/notices/">공지사항</a><a href="/inpulselink-preview/inpulselink-preview/terms/">이용약관</a><a href="/inpulselink-preview/inpulselink-preview/privacy/"><b>개인정보 처리방침</b></a></nav>
+    <div>(사업자명 미정) · 대표 - · 사업자등록번호 - · 고객센터 - · -</div>
+    <div>인펄스링크는 광고주와 인플루언서를 연결하는 통신판매중개자이며, 캠페인과 거래의 당사자는 각 광고주와 인플루언서입니다. 모든 협찬 콘텐츠에는 경제적 이해관계 표시(#광고 #협찬 등)가 필요합니다.</div>
+  </div>
+</footer>
+<script src="/inpulselink-preview/assets/app.js?v=2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" defer></script>
+<script src="/inpulselink-preview/assets/intro.js?v=2" defer></script>
+<script src="/inpulselink-preview/assets/motion.js?v=9" defer></script>
+<div class="pv-note" style="position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9999;background:#21201c;color:#fdfdfc;font:600 13px/1.4 Pretendard,system-ui,sans-serif;padding:10px 16px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:calc(100vw - 32px);text-align:center">미리보기 화면입니다 · 로그인·신청·결제는 동작하지 않아요</div>
+<script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 로그인·신청·결제가 동작하지 않아요.');},true);</script>
+</body>
+</html>
