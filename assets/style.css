@@ -512,10 +512,11 @@ html.lenis, html.lenis body { height: auto; }
 .price-band { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--ink); color: var(--on-ink); border-radius: var(--radius); padding: 32px; }
 .price-band h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; }
 .price-band p { margin-top: 8px; opacity: .8; }
-.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.plans { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 1100px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .plan { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.plan.hot { border: 2px solid var(--ink); }
-.plan.cur { border: 2px solid var(--lime); }
+.plan.hot { border: 2px solid var(--ink); padding: 23px; }
+.plan.cur { border: 2px solid var(--lime); padding: 23px; }
 .plan-hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 28px; }
 .plan-hd h2 { font-size: 18px; font-weight: 800; }
 .plan-price b { font-size: 32px; font-weight: 900; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
