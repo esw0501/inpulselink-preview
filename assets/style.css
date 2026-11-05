@@ -501,3 +501,32 @@ html.intro-on .intro { display: block; position: fixed; inset: 0; z-index: 100; 
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- v2: 진행 흐름 · 요금제 ---------- */
+.flow { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; counter-reset: f; }
+.flow li { list-style: none; counter-increment: f; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; min-width: 0; }
+.flow li::before { content: counter(f, decimal-leading-zero); display: block; font-size: 12px; font-weight: 800; color: var(--lime-tx); margin-bottom: 8px; }
+.flow li b { display: block; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+.flow li span { display: block; font-size: 13px; color: var(--sub); margin-top: 4px; }
+.price-band { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--ink); color: var(--on-ink); border-radius: var(--radius); padding: 32px; }
+.price-band h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.03em; }
+.price-band p { margin-top: 8px; opacity: .8; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.plan.hot { border: 2px solid var(--ink); }
+.plan.cur { border: 2px solid var(--lime); }
+.plan-hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 28px; }
+.plan-hd h2 { font-size: 18px; font-weight: 800; }
+.plan-price b { font-size: 32px; font-weight: 900; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.plan-price span { color: var(--sub); margin-left: 4px; }
+.plan-year { font-size: 13px; color: var(--sub); margin-top: -8px; min-height: 20px; }
+.plan-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); flex: 1; }
+.plan-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.plan-list li span { color: var(--sub); }
+.plans-sm { margin-bottom: 16px; }
+.plans-sm .plan-price b { font-size: 24px; }
+@media (max-width: 960px) {
+  .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .price-band { flex-direction: column; align-items: flex-start; padding: 24px; }
+  .plans { grid-template-columns: 1fr; }
+}

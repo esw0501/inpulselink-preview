@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="인펄스링크">
 <link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=14">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=15">
 <script>
 /* 첫 그림 전에 테마·모션 결정(깜빡임 방지). 기본은 밝게, 고른 값은 이 브라우저에만 저장 */
 (function () {
@@ -42,8 +42,8 @@
     <nav class="gnb">
               <a href="/inpulselink-preview/inpulselink-preview/campaigns/" class="">캠페인</a>
               <a href="/inpulselink-preview/inpulselink-preview/influencers/" class="">인플루언서</a>
-              <a href="/inpulselink-preview/inpulselink-preview/market/" class="">마켓</a>
-              <a href="/inpulselink-preview/inpulselink-preview/feed/" class="">실시간 콘텐츠</a>
+              <a href="/inpulselink-preview/inpulselink-preview/pricing/" class="">요금제</a>
+              <a href="/inpulselink-preview/inpulselink-preview/guide/" class="">이용 안내</a>
           </nav>
     <div class="hd-right">
       <button class="theme-tg" type="button" data-theme-toggle aria-label="밝게/어둡게 전환" title="밝게/어둡게 전환">
@@ -57,32 +57,32 @@
   <nav class="mnav">
           <a href="/inpulselink-preview/inpulselink-preview/campaigns/" class="">캠페인</a>
           <a href="/inpulselink-preview/inpulselink-preview/influencers/" class="">인플루언서</a>
-          <a href="/inpulselink-preview/inpulselink-preview/market/" class="">마켓</a>
-          <a href="/inpulselink-preview/inpulselink-preview/feed/" class="">실시간 콘텐츠</a>
+          <a href="/inpulselink-preview/inpulselink-preview/pricing/" class="">요금제</a>
+          <a href="/inpulselink-preview/inpulselink-preview/guide/" class="">이용 안내</a>
       </nav>
   <div class="scroll-bar" aria-hidden="true"></div>
 </header>
-<main><div class="wrap">
-  <div class="auth">
-    <h1>회원가입</h1>
-    <p class="sub">어떤 계정으로 시작할까요?</p>
-    <div class="tabs2">
-      <a href="/inpulselink-preview/inpulselink-preview/signup/?role=influencer" class="on">인플루언서</a>
-      <a href="/inpulselink-preview/inpulselink-preview/signup/?role=brand" class="">광고주(비즈니스)</a>
-    </div>
-    <p class="small muted" style="margin-bottom:20px">캠페인 신청 · 공개 링크 페이지 · 서비스 판매를 쓰는 계정이에요.</p>
-    <form method="post" action="/inpulselink-preview/inpulselink-preview/signup/" class="form">
-      <input type="hidden" name="_csrf" value="9d406af4d5307813a9f91e9f53753941">      <input type="hidden" name="role" value="influencer">
-      <div class="field"><label for="email">이메일</label><input class="in" type="email" id="email" name="email" value="" required autocomplete="email"></div>
-      <div class="field"><label for="pw">비밀번호</label><input class="in" type="password" id="pw" name="password" minlength="8" required autocomplete="new-password"><span class="hint">8자 이상</span></div>
-      <div class="field"><label for="name">닉네임</label><input class="in" id="name" name="name" value="" required maxlength="30"></div>
-              <div class="field"><label for="inv">초대 코드 <span class="muted small">(받았다면)</span></label><input class="in mono" id="inv" name="invite_code" value="" maxlength="20" style="text-transform:uppercase"><span class="hint">초대 코드로 가입하면 바로 인증 배지가 붙어요.</span></div>
-            <label class="agree"><input type="checkbox" name="agree" value="1" required> <span><a class="link" href="/inpulselink-preview/inpulselink-preview/terms/" target="_blank">이용약관</a>과 <a class="link" href="/inpulselink-preview/inpulselink-preview/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다. (만 14세 이상)</span></label>
-      <button class="btn btn-pri btn-lg btn-block">가입하기</button>
-    </form>
-    <p class="small muted" style="text-align:center;margin-top:20px">이미 계정이 있으신가요? <a class="link" href="/inpulselink-preview/inpulselink-preview/login/">로그인</a></p>
-  </div>
-</div>
+<main><div class="wrap">
+  <div class="auth">
+    <h1>회원가입</h1>
+    <p class="sub">어떤 계정으로 시작할까요?</p>
+    <div class="tabs2">
+      <a href="/inpulselink-preview/inpulselink-preview/signup/?role=influencer" class="on">인플루언서</a>
+      <a href="/inpulselink-preview/inpulselink-preview/signup/?role=brand" class="">광고주(비즈니스)</a>
+    </div>
+    <p class="small muted" style="margin-bottom:20px">캠페인 신청 · 제안 받기 · 포트폴리오 공개 페이지를 쓰는 계정이에요.</p>
+    <form method="post" action="/inpulselink-preview/inpulselink-preview/signup/" class="form">
+      <input type="hidden" name="_csrf" value="6d04d7f7db9ba79c42630346212e7c35">      <input type="hidden" name="role" value="influencer">
+      <div class="field"><label for="email">이메일</label><input class="in" type="email" id="email" name="email" value="" required autocomplete="email"></div>
+      <div class="field"><label for="pw">비밀번호</label><input class="in" type="password" id="pw" name="password" minlength="8" required autocomplete="new-password"><span class="hint">8자 이상</span></div>
+      <div class="field"><label for="name">닉네임</label><input class="in" id="name" name="name" value="" required maxlength="30"></div>
+              <div class="field"><label for="inv">초대 코드 <span class="muted small">(받았다면)</span></label><input class="in mono" id="inv" name="invite_code" value="" maxlength="20" style="text-transform:uppercase"><span class="hint">초대 코드로 가입하면 바로 인증 배지가 붙어요.</span></div>
+            <label class="agree"><input type="checkbox" name="agree" value="1" required> <span><a class="link" href="/inpulselink-preview/inpulselink-preview/terms/" target="_blank">이용약관</a>과 <a class="link" href="/inpulselink-preview/inpulselink-preview/privacy/" target="_blank">개인정보 처리방침</a>에 동의합니다. (만 14세 이상)</span></label>
+      <button class="btn btn-pri btn-lg btn-block">가입하기</button>
+    </form>
+    <p class="small muted" style="text-align:center;margin-top:20px">이미 계정이 있으신가요? <a class="link" href="/inpulselink-preview/inpulselink-preview/login/">로그인</a></p>
+  </div>
+</div>
 </main>
 <footer class="ft">
   <div class="wrap">
@@ -91,7 +91,7 @@
     <div>인펄스링크는 광고주와 인플루언서를 연결하는 통신판매중개자이며, 캠페인과 거래의 당사자는 각 광고주와 인플루언서입니다. 모든 협찬 콘텐츠에는 경제적 이해관계 표시(#광고 #협찬 등)가 필요합니다.</div>
   </div>
 </footer>
-<script src="/inpulselink-preview/assets/app.js?v=2" defer></script>
+<script src="/inpulselink-preview/assets/app.js?v=3" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js" defer></script>

@@ -59,4 +59,19 @@
     };
     cf.addEventListener('input', sync); cf.addEventListener('change', sync); sync();
   }
+
+  // AI 매칭 예시 문장 채우기
+  document.querySelectorAll('[data-fill]').forEach((b) => b.addEventListener('click', () => {
+    const ta = b.closest('form').querySelector('textarea');
+    if (ta) { ta.value = b.dataset.fill; ta.focus(); }
+  }));
+
+  // 메시지 창은 마지막 줄부터 보이게
+  const mb = document.querySelector('.msg-body');
+  if (mb) mb.scrollTop = mb.scrollHeight;
+
+  // 펼침 메뉴(제안하기·신고)는 밖을 누르면 닫기
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('details.pop[open]').forEach((d) => { if (!d.contains(e.target)) d.removeAttribute('open'); });
+  });
 })();
