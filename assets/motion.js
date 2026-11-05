@@ -41,7 +41,7 @@
 
   // 글꼴이 다 와야 줄 나눔을 잴 수 있다(최대 1.2초 기다림)
   const fontsReady = Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise((r) => setTimeout(r, 1200))]);
-  fontsReady.then(() => { hero(); reveals(); marquee(); });
+  fontsReady.then(() => { hero(); reveals(); steps(); });
 
   /* ================= 히어로 ================= */
   function hero() {
@@ -95,53 +95,13 @@
     });
   }
 
-  /* ================= 흐르는 글자 띠: 글자 굵기가 파도처럼 지나감(가변 글꼴 굵기 축) =================
-     스크롤을 빨리 할수록 띠도 파도도 빨라지고, 위로 올리면 거꾸로. Pretendard 한글은 굵기가 바뀌어도
-     폭이 같아서 글자를 하나씩 굵게 해도 띠가 흔들리지 않는다 */
-  function marquee() {
-    const track = document.querySelector('.mq-track');
-    if (!track) return;
-    const tw = g.to(track, { xPercent: -50, ease: 'none', duration: 26, repeat: -1 });
-    const skew = g.quickTo(track, 'skewX', { duration: 0.4, ease: 'power3' });
-
-    // 단어를 글자로 나눔
-    const chars = [];
-    track.querySelectorAll('span').forEach((w) => {
-      const text = w.textContent;
-      w.textContent = '';
-      for (const c of text) { const b = document.createElement('b'); b.className = 'ch'; b.textContent = c; w.append(b); chars.push(b); }
-    });
-    let mid = [], trackW = 1;
-    const measure = () => { trackW = track.scrollWidth; mid = chars.map((c) => c.offsetLeft + c.offsetWidth / 2); };
-    measure();
-    addEventListener('resize', measure);
-
-    const wave = { speed: 1 };
-    let phase = 0, dir = 1, on = true;
-    ScrollTrigger.create({ trigger: track, start: 'top bottom', end: 'bottom top', onToggle: (s) => { on = s.isActive; } });
-    g.ticker.add((time, dt) => {
-      if (!on) return;
-      phase += (dt / 1000) * 2.4 * wave.speed * dir;
-      const shift = (g.getProperty(track, 'xPercent') / 100) * trackW, W = innerWidth, len = Math.max(340, W * 0.45);
-      for (let i = 0; i < chars.length; i++) {
-        const x = mid[i] + shift;
-        if (x < -200 || x > W + 200) continue;        // 화면 밖 글자는 건드리지 않음
-        const k = (Math.cos((x / len) * Math.PI * 2 - phase) + 1) / 2;
-        chars[i].style.fontWeight = Math.round(140 + 760 * Math.pow(k, 1.8));
-      }
-    });
-
-    ScrollTrigger.create({
-      onUpdate: (self) => {
-        dir = self.direction;
-        const v = self.getVelocity(), boost = 1 + Math.min(4, Math.abs(v) / 350);
-        g.to(tw, { timeScale: dir * boost, duration: 0.2, overwrite: true,
-          onComplete: () => g.to(tw, { timeScale: dir, duration: 1.2, ease: 'power2.out' }) });
-        g.to(wave, { speed: boost, duration: 0.2, overwrite: true, onComplete: () => g.to(wave, { speed: 1, duration: 1.2, ease: 'power2.out' }) });
-        skew(g.utils.clamp(-8, 8, -v / 250));
-        clearTimeout(marquee.t); marquee.t = setTimeout(() => skew(0), 120);
-      },
-    });
+  /* ================= 진행 단계 줄: 화면에 처음 들어올 때 한 번만 차례로 켜짐(반복·흐름 없음) ================= */
+  function steps() {
+    const box = document.querySelector('.pstep');
+    if (!box) return;
+    const tl = g.timeline({ paused: true });
+    tl.from(box.children, { opacity: 0, y: 10, duration: 0.35, stagger: 0.08, ease: 'power2.out' });   // 왼쪽부터 차례로 한 번
+    ScrollTrigger.create({ trigger: box, start: 'top 85%', once: true, onEnter: () => tl.play() });
   }
 
   /* ================= 숫자 올라가기 ================= */

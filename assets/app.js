@@ -56,7 +56,27 @@
       const total = (payout + fee) * num(val('recruit_count').value);
       out('payout', won(payout) + '원'); out('fee', won(fee) + '원'); out('total', won(total) + '원');
       out('short', total > balance ? `예치금이 ${won(total - balance)}원 부족해요. 임시 저장 후 충전하세요.` : '');
+      const p = pkg();
+      out('rec', !p || (!p.min && !p.max) ? '' : `${p.name} 권장 단가 ${p.label}` + (p.min && payout < p.min ? ' — 이보다 낮으면 지원이 적을 수 있어요(강제 아님)' : ''));
     };
+
+    // 진행 방식(패키지): 고르면 단계·광고 코드·2차 활용을 채우고, 단계를 직접 바꾸면 "직접 설정"으로 돌린다(서버도 같은 규칙)
+    const pkgs = JSON.parse(cf.dataset.packages || '[]');
+    const pkg = () => pkgs.find((p) => p.code === (cf.querySelector('[name=package_code]:checked') || {}).value);
+    const usage = val('usage_rights');
+    cf.querySelectorAll('[name=package_code]').forEach((r) => r.addEventListener('change', () => {
+      const p = pkg();
+      if (!p) return;
+      cf.querySelectorAll('[name="steps[]"]').forEach((c) => { if (!c.disabled) c.checked = p.steps.includes(c.value); });
+      val('ad_code').checked = !!p.ad;
+      if (usage && (!usage.value.trim() || pkgs.some((q) => q.usage === usage.value))) usage.value = p.usage;
+    }));
+    cf.querySelectorAll('[name="steps[]"], [name=ad_code]').forEach((c) => c.addEventListener('change', () => {
+      const p = pkg();
+      if (!p) return;
+      const same = [...cf.querySelectorAll('[name="steps[]"]:not(:disabled)')].every((x) => x.checked === p.steps.includes(x.value)) && val('ad_code').checked === !!p.ad;
+      if (!same) cf.querySelector('[name=package_code][value=""]').checked = true;
+    }));
     cf.addEventListener('input', sync); cf.addEventListener('change', sync); sync();
   }
 

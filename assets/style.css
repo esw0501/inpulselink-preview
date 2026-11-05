@@ -206,6 +206,19 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
 .box { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .box + .box { margin-top: 16px; }
 .box h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+.rsteps { margin-top: 32px; padding: 20px 24px 24px; border-radius: var(--radius); background: var(--soft); }
+.rsteps h3 { font-size: 15px; font-weight: 800; margin: 0 0 16px; }
+.rsteps ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; }
+.rsteps li { list-style: none; position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; padding: 0 4px; }
+.rsteps li + li::before { content: ''; position: absolute; top: 13px; right: 50%; width: 100%; height: 2px; background: var(--line-strong); }
+.rsteps li.on + li.on::before { background: var(--ink); }
+.rsteps i { position: relative; z-index: 1; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--surface); border: 2px solid var(--line-strong); color: var(--lime); }
+.rsteps li.on i { background: var(--ink); border-color: var(--ink); }
+.rsteps i svg { width: 14px; height: 14px; }
+.rsteps b { margin-top: 10px; font-size: 14px; font-weight: 700; line-height: 1.35; }
+.rsteps li:not(.on) b { color: var(--mute); }
+.rsteps span { margin-top: 2px; font-size: 12px; color: var(--mute); }
+.rsteps li.on span { color: var(--lime-tx); font-weight: 700; }
 .prose { line-height: 1.75; }
 .prose p + p, .prose ul, .prose h3 { margin-top: 12px; }
 .prose ul { padding-left: 20px; }
@@ -414,10 +427,18 @@ html[data-theme="dark"] .ph1 { background: #2b2a26; }   /* 잉크 썸네일이 �
 }
 
 /* 흐르는 글자 띠: 라임 바탕 잉크 글자 (스크롤 속도에 반응) */
-.marquee { overflow: hidden; background: #bdee63; color: #21201c; padding: 14px 0; }
-.mq-track { position: relative; display: flex; width: max-content; align-items: center; gap: 28px; font-size: clamp(40px, 5.6vw, 84px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; white-space: nowrap; }
-.mq-track .ch { font-weight: inherit; }   /* 굵기는 motion.js가 글자마다 움직임(외곽선 글자는 가변 글꼴의 겹친 윤곽이 보여서 안 씀) */
-.mq-track i { font-style: normal; font-size: .5em; font-weight: 300; }
+/* 영상 아래 진행 단계 줄: 움직이지 않음(흐르는 글자 띠는 눈에 걸린다는 피드백으로 교체, 2026-11-05) */
+.steps-band { background: #bdee63; color: #21201c; padding: 28px 0 32px; }
+.sb-hd { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.sb-hd h2 { margin: 0; font-size: 15px; font-weight: 800; letter-spacing: -0.02em; }
+.sb-hd a { font-size: 14px; font-weight: 600; color: inherit; }
+.pstep { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0; padding: 0; }
+.pstep li { list-style: none; position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 4px; min-width: 0; }
+.pstep li + li::before { content: ''; position: absolute; top: 15px; right: 50%; width: 100%; height: 2px; background: #21201c; transform-origin: left center; }
+.pstep i { position: relative; z-index: 1; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #21201c; color: #bdee63; }
+.pstep i svg { width: 16px; height: 16px; }
+.pstep b { margin-top: 12px; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+.pstep span { margin-top: 4px; font-size: 13px; line-height: 1.45; color: rgba(33, 32, 28, .72); }
 
 /* 첫 그림 전 숨김(GSAP이 켬). 스크립트가 실패하면 head 스크립트가 motion 클래스를 떼서 다시 보임 */
 html.motion .vh-in, html.motion .vh-badges, html.motion [data-g] { visibility: hidden; }
@@ -529,6 +550,9 @@ html.lenis, html.lenis body { height: auto; }
 .plans-sm .plan-price b { font-size: 24px; }
 @media (max-width: 960px) {
   .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pstep { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 24px; }
+  .pstep li:nth-child(5)::before { display: none; }   /* 둘째 줄 첫 칸은 앞 줄과 잇지 않음 */
+  .pstep span { display: none; }
   .price-band { flex-direction: column; align-items: flex-start; padding: 24px; }
   .plans { grid-template-columns: 1fr; }
 }
