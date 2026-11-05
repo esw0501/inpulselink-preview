@@ -229,7 +229,8 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
 .pf .h { color: var(--mute); }
 .pf .bio { margin-top: 8px; color: var(--sub); }
 .links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
-.links a { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); }
+.links-note, .mdemo-note { margin-top: 12px; font-size: 13px; color: var(--sub); }
+.links > * { display: flex; flex-direction: column; gap: 4px; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); }
 .links a:hover { border-color: var(--ink); }
 .links b { font-size: 20px; font-weight: 900; }
 .links span { font-size: 13px; color: var(--sub); }
@@ -529,4 +530,39 @@ html.lenis, html.lenis body { height: auto; }
   .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-band { flex-direction: column; align-items: flex-start; padding: 24px; }
   .plans { grid-template-columns: 1fr; }
+}
+
+/* ---------- v2 홈: AI 매칭 예시 · 안심 4가지 ---------- */
+.mdemo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; align-items: stretch; }
+.mdemo-chat, .mdemo-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; min-width: 0; }
+.mdemo-chat { display: flex; flex-direction: column; gap: 12px; }
+.mdemo-q { align-self: flex-end; max-width: 90%; background: var(--ink); color: var(--on-ink); padding: 12px 16px; border-radius: 16px 16px 4px 16px; font-weight: 600; }
+.mdemo-a { align-self: flex-start; max-width: 90%; background: var(--soft); padding: 12px 16px; border-radius: 16px 16px 16px 4px; }
+.mdemo-a .mdemo-lb { display: block; font-size: 12px; font-weight: 700; color: var(--sub); }
+.mdemo-a b { display: block; margin-top: 4px; color: var(--lime-tx); font-weight: 800; }
+.mdemo-a p { margin-top: 8px; font-size: 13px; color: var(--sub); }
+.mdemo-chat .btn { margin-top: auto; }
+.mdemo-note { margin-top: 0; }
+.mdemo-list { list-style: none; margin: 0; display: flex; flex-direction: column; }
+.mdemo-list li { display: grid; grid-template-columns: 24px auto minmax(0, 1fr); align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.mdemo-list li:first-child { padding-top: 0; }
+.mdemo-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.mdemo-list li:nth-last-child(2) { border-bottom: 0; }
+.mdemo-list li.mdemo-foot { display: block; margin-top: auto; padding: 16px 0 0; border-top: 1px solid var(--line); border-bottom: 0; font-size: 13px; color: var(--sub); }
+.mdemo-no { font-size: 13px; font-weight: 800; color: var(--lime-tx); font-variant-numeric: tabular-nums; }
+.mdemo-who { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mdemo-who a { color: var(--ink); }
+.mdemo-who span { font-size: 13px; color: var(--sub); }
+.trust { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.trust > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; min-width: 0; }
+.trust b { display: block; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+.trust b::before { content: ""; display: block; width: 24px; height: 4px; border-radius: 2px; background: var(--lime); margin-bottom: 16px; }
+.trust p { margin-top: 8px; font-size: 14px; color: var(--sub); }
+@media (max-width: 960px) {
+  .mdemo { grid-template-columns: 1fr; }
+  .trust { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .trust { grid-template-columns: 1fr; }
+  .mdemo-chat, .mdemo-list, .trust > div { padding: 20px; }
 }
