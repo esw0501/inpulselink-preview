@@ -8,7 +8,7 @@
 <title>출금 | 본사 어드민 | 인펄스링크</title>
 <link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=20">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=21">
 <link rel="stylesheet" href="/inpulselink-preview/assets/console.css?v=14">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class="">캠페인 심사 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class="">회원</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class="">CS 문의 (2)</a>
-      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on">출금</a>
+      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on">출금·환불</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class="">입금 확인 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class="">구독·요금제</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class="">매출 통계</a>
@@ -41,7 +41,7 @@
                       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class=""><span>캠페인 심사</span><span class="n">1</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class=""><span>회원</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
-                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on"><span>출금</span></a>
+                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on"><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
               <div class="gap"></div>                <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
@@ -55,9 +55,10 @@
     </div>
   </aside>
   <main class="cs-main">
-            <div class="cs-hd"><div><h1>출금</h1><p class="sub">이체는 은행에서 직접 하고, 끝난 건만 "이체 완료"로 표시하세요. 원천징수 신고(사업소득 간이지급명세서)는 매월 세무 대리인에게 CSV를 넘기세요.</p></div>
+                <div class="cs-hd"><div><h1>출금</h1><p class="sub">이체는 은행에서 직접 하고, 끝난 건만 "이체 완료"로 표시하세요. 원천징수 신고(사업소득 간이지급명세서)는 매월 세무 대리인에게 CSV를 넘기세요.</p></div>
   <a class="btn btn-sm" href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/csv/?status=requested">CSV 내려받기</a></div>
-<div class="tabbar"><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=requested" class="on">처리 대기</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=paid" class="">이체 완료</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=rejected" class="">반려</a></div>
+<div class="tabbar"><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on">인플루언서 출금</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?kind=refund" class="">광고주 예치금 환불</a></div>
+<div class="tabbar"><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=requested" class="on">처리 대기</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=paid" class="">이체 완료</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=rejected" class="">반려·취소</a></div>
 <div class="card">
   <p class="muted">없어요.</p></div>
   </main>

@@ -8,7 +8,7 @@
 <title>봄빛베이커리 | 본사 어드민 | 인펄스링크</title>
 <link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=20">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=21">
 <link rel="stylesheet" href="/inpulselink-preview/assets/console.css?v=14">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class="">캠페인 심사 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class="on">회원</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class="">CS 문의 (2)</a>
-      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="">출금</a>
+      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="">출금·환불</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class="">입금 확인 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class="">구독·요금제</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class="">매출 통계</a>
@@ -41,7 +41,7 @@
                       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class=""><span>캠페인 심사</span><span class="n">1</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class="on"><span>회원</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
-                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class=""><span>출금</span></a>
+                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
               <div class="gap"></div>                <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
@@ -55,22 +55,23 @@
     </div>
   </aside>
   <main class="cs-main">
-            <div class="cs-hd"><div><h1>봄빛베이커리 </h1><p class="sub">광고주 · brand4@demo.test · 02-000-0003 · 가입 2026-11-09</p></div>
+                <div class="cs-hd"><div><h1>봄빛베이커리 </h1><p class="sub">광고주 · brand4@demo.test · 02-000-0003 · 가입 2026-11-12</p></div>
   </div>
 <div class="cols">
   <div>
         <div class="card"><h2>회사</h2><p>사업자번호 <span class="mono">4567890123</span> · 담당 최사장 · </p>
       <p class="mt8" style="margin-top:8px">요금제 <b>무료</b> · 오늘 제안·AI 매칭 0건</p></div>
         <div class="card"><h2>계정 상태 <span class="bdg">이용 중</span></h2>
-            <form method="post" class="inline-form" data-confirm="상태를 바꿀까요?"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="status"><input type="hidden" name="status" value="suspended"><button class="btn btn-sm">이용 정지</button></form>    </div>
+                    <p class="small muted" style="margin:0 0 8px">정지하면 새 신청·선정·제안이 멈춰요. 이미 선정된 인플루언서의 제출과 지급은 그대로 진행돼요(자동 승인). 지금 걸려 있는 일은 없어요.</p>
+            <form method="post" class="inline-form" data-confirm="상태를 바꿀까요?"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="status"><input type="hidden" name="status" value="suspended"><button class="btn btn-sm">이용 정지</button></form>    </div>
   </div>
   <div class="card"><h2>잔액 300,000원</h2>
     <details class="fold"><summary>수동 조정</summary>
-      <form method="post" class="form" style="gap:8px" data-confirm="잔액을 조정할까요? 원장에 기록됩니다."><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="adjust"><input type="hidden" name="once" value="89aef4fec1788362">
+      <form method="post" class="form" style="gap:8px" data-confirm="잔액을 조정할까요? 원장에 기록됩니다."><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="adjust"><input type="hidden" name="once" value="7dac98cdaa54e2fd">
         <input class="in" name="amount" placeholder="+10000 또는 -5000" required><input class="in" name="memo" placeholder="사유(필수)" required><button class="btn btn-sm">조정</button></form>
     </details>
     <div class="tbl-wrap mt16" style="margin-top:12px"><table class="tbl"><thead><tr><th>일시</th><th>구분</th><th class="num">변동</th><th class="num">잔액</th></tr></thead><tbody>
-      <tr title="샘플 충전"><td class="small">2026-11-09 13:03</td><td class="small">예치금 충전</td><td class="num plus">300,000</td><td class="num">300,000</td></tr>    </tbody></table></div>
+      <tr title="샘플 충전"><td class="small">2026-11-12 17:35</td><td class="small">예치금 충전</td><td class="num plus">300,000</td><td class="num">300,000</td></tr>    </tbody></table></div>
   </div>
 </div>
   </main>

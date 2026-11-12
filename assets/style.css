@@ -591,3 +591,9 @@ html.lenis, html.lenis body { height: auto; }
   .trust { grid-template-columns: 1fr; }
   .mdemo-chat, .mdemo-list, .trust > div { padding: 20px; }
 }
+
+/* 소셜 가입·로그인 버튼 묶음 */
+.social { display: grid; gap: 8px; margin-top: 20px; }
+.social-or { display: flex; align-items: center; gap: 12px; margin: 0 0 4px; font-size: 13px; color: var(--mute); }
+.social-or::before, .social-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+

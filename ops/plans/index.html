@@ -8,7 +8,7 @@
 <title>구독·요금제 | 본사 어드민 | 인펄스링크</title>
 <link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=20">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=21">
 <link rel="stylesheet" href="/inpulselink-preview/assets/console.css?v=14">
 </head>
 <body>
@@ -22,7 +22,7 @@
       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class="">캠페인 심사 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class="">회원</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class="">CS 문의 (2)</a>
-      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="">출금</a>
+      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="">출금·환불</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class="">입금 확인 (1)</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class="on">구독·요금제</a>
       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class="">매출 통계</a>
@@ -41,7 +41,7 @@
                       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class=""><span>캠페인 심사</span><span class="n">1</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class=""><span>회원</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
-                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class=""><span>출금</span></a>
+                      <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
               <div class="gap"></div>                <a href="/inpulselink-preview/inpulselink-preview/ops/plans/" class="on"><span>구독·요금제</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
@@ -55,8 +55,8 @@
     </div>
   </aside>
   <main class="cs-main">
-            <div class="cs-hd"><div><h1>구독·요금제</h1><p class="sub">한도 칸의 0은 무제한, 대행 브랜드는 -1이 무제한, 0이 대행 기능 없음이에요. 가격은 다음 결제부터, 한도는 저장하는 즉시 적용돼요.</p></div>
-  <form method="post" data-confirm="기간이 끝난 구독을 지금 처리할까요? (평소엔 크론이 10분마다 처리)"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="renew"><button class="btn btn-sm">만료 구독 지금 처리</button></form></div>
+                <div class="cs-hd"><div><h1>구독·요금제</h1><p class="sub">한도 칸의 0은 무제한, 대행 브랜드는 -1이 무제한, 0이 대행 기능 없음이에요. 가격은 다음 결제부터, 한도는 저장하는 즉시 적용돼요.</p></div>
+  <form method="post" data-confirm="기간이 끝난 구독을 지금 처리할까요? (평소엔 크론이 10분마다 처리)"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="renew"><button class="btn btn-sm">만료 구독 지금 처리</button></form></div>
 
 <div class="stats">
   <div class="stat dark"><span>월 반복 매출(MRR)</span><b>862,833원</b></div>
@@ -70,7 +70,7 @@
   <div class="tbl-wrap"><table class="tbl plan-edit">
     <thead><tr><th>등급</th><th class="num">월 요금</th><th class="num">연 요금</th><th class="num">제안·AI/일</th><th class="num">동시 캠페인</th><th class="num">저장 목록</th><th class="num" title="0 = 무제한">월 집행(원)</th><th class="num" title="-1 = 무제한, 0 = 대행 기능 없음">대행 브랜드</th><th>리포트</th><th></th></tr></thead>
     <tbody>      <tr>
-        <td><form id="pf-free" method="post"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="code" value="free"></form><input class="in in-sm" form="pf-free" name="name" value="무료" style="width:110px"> <span class="mono small muted">free</span></td>
+        <td><form id="pf-free" method="post"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="code" value="free"></form><input class="in in-sm" form="pf-free" name="name" value="무료" style="width:110px"> <span class="mono small muted">free</span></td>
         <td class="num"><input class="in in-sm num" form="pf-free" name="price_month" value="0" disabled></td>
         <td class="num"><input class="in in-sm num" form="pf-free" name="price_year" value="0" disabled></td>
         <td class="num"><input class="in in-sm num" form="pf-free" name="daily_contacts" value="1"></td>
@@ -82,7 +82,7 @@
         <td><button class="btn btn-sm btn-ink" form="pf-free">저장</button></td>
       </tr>
           <tr>
-        <td><form id="pf-standard" method="post"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="code" value="standard"></form><input class="in in-sm" form="pf-standard" name="name" value="스탠다드" style="width:110px"> <span class="mono small muted">standard</span></td>
+        <td><form id="pf-standard" method="post"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="code" value="standard"></form><input class="in in-sm" form="pf-standard" name="name" value="스탠다드" style="width:110px"> <span class="mono small muted">standard</span></td>
         <td class="num"><input class="in in-sm num" form="pf-standard" name="price_month" value="99000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-standard" name="price_year" value="990000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-standard" name="daily_contacts" value="10"></td>
@@ -94,7 +94,7 @@
         <td><button class="btn btn-sm btn-ink" form="pf-standard">저장</button></td>
       </tr>
           <tr>
-        <td><form id="pf-pro" method="post"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="code" value="pro"></form><input class="in in-sm" form="pf-pro" name="name" value="프로" style="width:110px"> <span class="mono small muted">pro</span></td>
+        <td><form id="pf-pro" method="post"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="code" value="pro"></form><input class="in in-sm" form="pf-pro" name="name" value="프로" style="width:110px"> <span class="mono small muted">pro</span></td>
         <td class="num"><input class="in in-sm num" form="pf-pro" name="price_month" value="199000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-pro" name="price_year" value="1990000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-pro" name="daily_contacts" value="0"></td>
@@ -106,7 +106,7 @@
         <td><button class="btn btn-sm btn-ink" form="pf-pro">저장</button></td>
       </tr>
           <tr>
-        <td><form id="pf-agency" method="post"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="code" value="agency"></form><input class="in in-sm" form="pf-agency" name="name" value="에이전시" style="width:110px"> <span class="mono small muted">agency</span></td>
+        <td><form id="pf-agency" method="post"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="code" value="agency"></form><input class="in in-sm" form="pf-agency" name="name" value="에이전시" style="width:110px"> <span class="mono small muted">agency</span></td>
         <td class="num"><input class="in in-sm num" form="pf-agency" name="price_month" value="499000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-agency" name="price_year" value="4990000" ></td>
         <td class="num"><input class="in in-sm num" form="pf-agency" name="daily_contacts" value="0"></td>
@@ -123,7 +123,7 @@
 
 <div class="card"><h2>캠페인 패키지 <span class="small muted">광고주가 캠페인을 만들 때 고르는 진행 방식. 권장 단가는 안내만 하고 강제하지 않아요(상한 0 = "부터")</span></h2>
   <div class="pkg-edit">
-          <form method="post" class="form"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="care">
+          <form method="post" class="form"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="care">
         <div class="row2">
           <div class="field"><label>이름 <span class="mono small muted">care</span></label><input class="in in-sm" name="name" value="풀케어" maxlength="30"></div>
           <div class="field"><label>맞는 규모</label><input class="in in-sm" name="target" value="전체 규모" maxlength="20"></div>
@@ -138,7 +138,7 @@
         <div class="checks"><label><input type="checkbox" name="ad_code" value="1" checked>광고 코드</label><label><input type="checkbox" name="active" value="1" checked>광고주에게 보이기</label></div>
         <div><button class="btn btn-sm btn-ink">저장</button></div>
       </form>
-          <form method="post" class="form"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="quick">
+          <form method="post" class="form"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="quick">
         <div class="row2">
           <div class="field"><label>이름 <span class="mono small muted">quick</span></label><input class="in in-sm" name="name" value="빠른 진행" maxlength="30"></div>
           <div class="field"><label>맞는 규모</label><input class="in in-sm" name="target" value="마이크로" maxlength="20"></div>
@@ -153,7 +153,7 @@
         <div class="checks"><label><input type="checkbox" name="ad_code" value="1" checked>광고 코드</label><label><input type="checkbox" name="active" value="1" checked>광고주에게 보이기</label></div>
         <div><button class="btn btn-sm btn-ink">저장</button></div>
       </form>
-          <form method="post" class="form"><input type="hidden" name="_csrf" value="6760c0d707fd0f1332c29a3ffdd57188"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="seed">
+          <form method="post" class="form"><input type="hidden" name="_csrf" value="2d3f92683198e2f9cc30c229d8dbdd7c"><input type="hidden" name="action" value="package"><input type="hidden" name="code" value="seed">
         <div class="row2">
           <div class="field"><label>이름 <span class="mono small muted">seed</span></label><input class="in in-sm" name="name" value="시딩" maxlength="30"></div>
           <div class="field"><label>맞는 규모</label><input class="in in-sm" name="target" value="나노" maxlength="20"></div>
@@ -178,7 +178,7 @@
         <td class="nm"><a class="link" href="/inpulselink-preview/inpulselink-preview/ops/users/3/"><b>데일리글로우</b></a></td>
         <td>스탠다드 · 월 결제</td>
         <td><span class="bdg bdg-ok">이용 중</span></td>
-        <td class="small">2026-10-11 ~ 2026-11-10</td>
+        <td class="small">2026-10-14 ~ 2026-11-13</td>
         <td class="small">자동 연장 99,000원</td>
         <td class="num ">3,191,000원</td>
       </tr>
@@ -186,7 +186,7 @@
         <td class="nm"><a class="link" href="/inpulselink-preview/inpulselink-preview/ops/users/6/"><b>모아애드</b></a></td>
         <td>에이전시 · 월 결제</td>
         <td><span class="bdg bdg-ok">이용 중</span></td>
-        <td class="small">2026-11-09 ~ 2026-12-08</td>
+        <td class="small">2026-11-12 ~ 2026-12-11</td>
         <td class="small">자동 연장 499,000원</td>
         <td class="num ">3,001,000원</td>
       </tr>
@@ -194,7 +194,7 @@
         <td class="nm"><a class="link" href="/inpulselink-preview/inpulselink-preview/ops/users/2/"><b>루미홈</b></a></td>
         <td>스탠다드 · 월 결제</td>
         <td><span class="bdg bdg-ok">이용 중</span></td>
-        <td class="small">2026-11-09 ~ 2026-12-08</td>
+        <td class="small">2026-11-12 ~ 2026-12-11</td>
         <td class="small">자동 연장 99,000원</td>
         <td class="num ">2,429,500원</td>
       </tr>
@@ -202,7 +202,7 @@
         <td class="nm"><a class="link" href="/inpulselink-preview/inpulselink-preview/ops/users/1/"><b>콩콩푸드랩</b></a></td>
         <td>프로 · 연 결제</td>
         <td><span class="bdg bdg-ok">이용 중</span></td>
-        <td class="small">2026-11-09 ~ 2027-11-08</td>
+        <td class="small">2026-11-12 ~ 2027-11-11</td>
         <td class="small">자동 연장 1,990,000원</td>
         <td class="num ">250,000원</td>
       </tr>
