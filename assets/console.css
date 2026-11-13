@@ -60,16 +60,12 @@ details.fold[open] summary { margin-bottom: 12px; }
   .cs-top { display: flex; align-items: center; gap: 12px; height: 56px; padding: 0 16px; background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
   .cs-top .logo { font-size: 17px; }
   .cs-top .who { margin-left: auto; font-size: 13px; color: var(--sub); }
-  .cs-mnav { display: flex; gap: 4px; overflow-x: auto; background: #fff; border-bottom: 1px solid var(--line); padding: 0 12px; }
-  .cs-mnav a { flex: none; padding: 10px 10px; font-size: 14px; font-weight: 700; color: var(--sub); }
-  .cs-mnav a.on { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
   .cs-main { padding: 20px 16px 48px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats.s3 { grid-template-columns: 1fr; }
   .cols, .cols-2-1 { grid-template-columns: 1fr; }
   .cs-hd { flex-wrap: wrap; }
 }
-@media (min-width: 961px) { .cs-mnav { display: none; } }
 
 /* 낮은 화면(노트북 768px 등)에서도 메뉴가 스크롤 없이 다 들어가게 줄 높이만 줄인다 */
 @media (max-height: 860px) {
@@ -252,3 +248,31 @@ details.pop > summary::-webkit-details-marker { display: none; }
 .noti .main { min-width: 0; flex: 1; }
 .noti .main b, .noti .main small { white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 600px) { .noti { align-items: flex-start; } .noti-t { display: none; } }
+
+/* 로그아웃처럼 글자로 보이는 버튼 */
+.as-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+.cs-foot form { margin: 0; }
+
+/* 휴대폰 아래 고정 메뉴: 4칸 + 전체. 자리가 늘 같다(옆으로 밀지 않는다) */
+.cs-tabs { display: none; }
+@media (max-width: 960px) {
+  .cs-tabs { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; height: 56px;
+    background: #fff; border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+  .cs-tabs > a, .cs-tabs summary { position: relative; display: flex; align-items: center; justify-content: center; height: 56px; padding: 0 4px;
+    font-size: 12.5px; font-weight: 700; color: var(--sub); text-align: center; line-height: 1.25; word-break: keep-all; cursor: pointer; }
+  .cs-tabs > a.on, .cs-tabs .cs-all.on > summary, .cs-tabs .cs-all[open] > summary { color: var(--ink); box-shadow: inset 0 2px 0 var(--ink); }
+  .cs-tabs summary { list-style: none; }
+  .cs-tabs summary::-webkit-details-marker { display: none; }
+  .cs-tabs b { position: absolute; top: 4px; right: 8px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 8px;
+    background: var(--red); color: #fff; font-size: 10px; line-height: 16px; font-weight: 700; }
+  .cs-sheet { position: fixed; left: 0; right: 0; bottom: calc(56px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--line); border-top: 1px solid var(--line); box-shadow: 0 -12px 32px rgba(0, 0, 0, .12); }
+  .cs-sheet a, .cs-sheet button { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; height: 48px; padding: 0 16px;
+    background: #fff; border: 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--ink); text-align: left; cursor: pointer; }
+  .cs-sheet a.on { background: var(--lime-bg); }
+  .cs-sheet form { margin: 0; display: contents; }
+  .cs-sheet button { grid-column: 1 / -1; }   /* 로그아웃은 맨 아래 한 줄 전체(빈 칸이 남지 않게) */
+  .cs-tabs > a span, .cs-tabs summary span { padding-top: 10px; }   /* 숫자 배지가 글자 위에 겹치지 않게 글자를 조금 내린다 */
+  .cs-sheet b { position: static; flex: none; }
+  .cs-main { padding-bottom: 88px; }
+}
