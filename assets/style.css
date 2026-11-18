@@ -651,3 +651,11 @@ html.lenis, html.lenis body { height: auto; }
   .mk-start { grid-template-columns: 1fr; }
   .mk-start a { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+/* ===== 로고(2026-11-18): 캐릭터 심볼 + 영문 CRIEO. docs/logo/build_brand.py 로 만든 SVG ===== */
+.logo img { display: block; height: 28px; width: auto; }
+.logo .lg-d { display: none; }
+html[data-theme="dark"] .logo .lg-l { display: none; }
+html[data-theme="dark"] .logo .lg-d { display: block; }
+.cs-side .logo img, .cs-top .logo img { height: 26px; }
+.it-logo img { display: block; height: 24px; width: auto; }
