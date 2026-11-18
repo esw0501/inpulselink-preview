@@ -49,7 +49,8 @@
     if (!sec) { counters(); return; }
     const vin = sec.querySelector('.vh-in'), badges = sec.querySelector('.vh-badges');
     const tl = g.timeline({ paused: true, defaults: { ease: 'expo.out' } });
-    tl.set([vin, badges], { visibility: 'visible' })
+    g.config({ nullTargetWarn: false });   // 숫자 띠·설명 글은 없을 수 있다(홈 구성에 따라)
+    tl.set([vin, badges].filter(Boolean), { visibility: 'visible' })
       .from('.vh-kicker', { y: 20, opacity: 0, duration: 0.8 }, 0)
       .from('.vh-title .l > span', { yPercent: 115, rotation: 4, transformOrigin: '0% 100%', duration: 1.2, stagger: 0.09 }, 0.05)
       .from('.vh-lead, .vh-cta .btn', { y: 24, opacity: 0, duration: 0.9, stagger: 0.07 }, 0.45)

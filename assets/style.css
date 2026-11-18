@@ -659,3 +659,15 @@ html[data-theme="dark"] .logo .lg-l { display: none; }
 html[data-theme="dark"] .logo .lg-d { display: block; }
 .cs-side .logo img, .cs-top .logo img { height: 22px; }
 .it-logo img { display: block; height: 20px; width: auto; }
+
+/* 메인 영상 위에 검색창(2026-11-18): 영상은 그대로, 긴 설명·숫자 띠 대신 검색창과 분야 버튼 */
+.vhero-mk .vh-in { padding-bottom: 40px; width: 100%; min-width: 0; box-sizing: border-box; }
+.vhero-mk .vh-title { font-size: clamp(44px, 7.4vw, 112px); }
+.vhero-mk .mk-search { margin-top: 28px; }
+.vhero-mk .mk-search .in { background: #fff; color: #21201c; border-color: #fff; }
+.vhero-mk .chip { background: rgba(10,10,10,.45); border-color: rgba(255,255,255,.32); color: #fff; }
+.vhero-mk .chip:hover { background: #fff; border-color: #fff; color: #0a0a0a; }
+@media (max-width: 560px) {
+  .vhero-mk .vh-in { padding-bottom: 24px; }
+  .vhero-mk .mk-search { margin-top: 20px; }
+}
