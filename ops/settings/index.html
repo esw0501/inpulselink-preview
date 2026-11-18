@@ -37,7 +37,7 @@
               <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
               <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
               <a href="/inpulselink-preview/ops/settings/" class="on"><span>설정·점검</span></a>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9"><button><span>로그아웃</span></button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="62c619d1a99bc8ad548f2e800b88e664"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -62,14 +62,14 @@
           </nav>
     <div class="cs-foot">
       <span class="who">테스트 관리자</span>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9"><button class="as-link">로그아웃</button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="62c619d1a99bc8ad548f2e800b88e664"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
                     <div class="cs-hd"><div><h1>설정·점검</h1><p class="sub">요금제 가격·한도는 <a class="link" href="/inpulselink-preview/ops/plans/">구독·요금제</a>에서 바꿔요.</p></div><div class="actions"><a class="btn btn-sm" href="/inpulselink-preview/ops/contents/">포트폴리오 숨김 관리</a><a class="btn btn-sm" href="/inpulselink-preview/ops/logs/">감사 로그</a></div></div>
 <div class="cols">
   <div class="card"><h2>정책·기간</h2>
-    <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9">              <div class="field"><label>광고주 가입 승인제(1/0)</label><input class="in" name="approve_brand" value="1" inputmode="numeric"><span class="hint">1이면 사업자 확인 후 운영자가 승인해야 이용</span></div>
+    <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="62c619d1a99bc8ad548f2e800b88e664">              <div class="field"><label>광고주 가입 승인제(1/0)</label><input class="in" name="approve_brand" value="1" inputmode="numeric"><span class="hint">1이면 사업자 확인 후 운영자가 승인해야 이용</span></div>
               <div class="field"><label>인플루언서 가입 승인제(1/0)</label><input class="in" name="approve_influencer" value="1" inputmode="numeric"><span class="hint">1이면 초대 코드 없이 가입한 사람은 승인 후 이용</span></div>
               <div class="field"><label>구독 연장 실패 유예(일)</label><input class="in" name="grace_days" value="3" inputmode="numeric"><span class="hint">이 기간 안에 충전하면 이어서 이용, 지나면 무료로</span></div>
               <div class="field"><label>제안 만료(일)</label><input class="in" name="proposal_expire_days" value="7" inputmode="numeric"><span class="hint">답이 없는 제안은 이 기간 뒤 만료</span></div>
@@ -89,6 +89,7 @@
               <div class="field"><label>끌어올리기: 골드</label><input class="in" name="reseller_boost_gold" value="5" inputmode="numeric"></div>
               <div class="field"><label>광고주 소개 수수료(1/100 %)</label><input class="in" name="reseller_brand_rate_bp" value="0" inputmode="numeric"><span class="hint">총판이 데려온 광고주의 구독료에서 총판에게 주는 비율. 회사 매출에서 나가요. 0 = 소개 기록만</span></div>
               <div class="field"><label>건당 결제: 선정 1명당 수수료(원)</label><input class="in" name="pay_per_select_fee" value="0" inputmode="numeric"><span class="hint">구독하지 않은 광고주가 선정할 때 예치금에서 받는 금액. 0 = 끔(지금처럼 무료 한도만 적용)</span></div>
+              <div class="field"><label>초기 목표: 활동 인플루언서(명)</label><input class="in" name="launch_influencer_goal" value="100" inputmode="numeric"><span class="hint">운영 현황에 진행률로 보여요. 0이면 숨겨요</span></div>
               <div class="field"><label>일반 참여단 받기(0/1)</label><input class="in" name="reviewer_open" value="0" inputmode="numeric"><span class="hint">1이면 가입 때 "일반 참여단(체험단·리뷰)"을 고를 수 있고, 캠페인에 모집 대상(인플루언서/일반 참여단/둘 다)이 생겨요</span></div>
             <div><button class="btn btn-ink">저장</button></div>
     </form>
