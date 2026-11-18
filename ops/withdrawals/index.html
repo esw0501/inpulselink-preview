@@ -28,6 +28,7 @@
               <a href="/inpulselink-preview/inpulselink-preview/ops/approvals/" class=""><span>회원 승인</span><b>2</b></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class=""><span>캠페인 심사</span><b>1</b></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class=""><span>회원</span></a>
+              <a href="/inpulselink-preview/inpulselink-preview/ops/resellers/" class=""><span>총판</span></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><b>2</b></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on"><span>출금·환불</span></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><b>1</b></a>
@@ -36,7 +37,7 @@
               <a href="/inpulselink-preview/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
               <a href="/inpulselink-preview/inpulselink-preview/ops/settings/" class=""><span>설정·점검</span></a>
-                  <form method="post" action="/inpulselink-preview/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="2e4132c8a8120f80a62051d53e3442b5"><button><span>로그아웃</span></button></form>
+                  <form method="post" action="/inpulselink-preview/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="bdb7c211834a7915c26ad6624a65666c"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -49,6 +50,7 @@
                       <a href="/inpulselink-preview/inpulselink-preview/ops/approvals/" class=""><span>회원 승인</span><span class="n">2</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/campaigns/" class=""><span>캠페인 심사</span><span class="n">1</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/users/" class=""><span>회원</span></a>
+                      <a href="/inpulselink-preview/inpulselink-preview/ops/resellers/" class=""><span>총판</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on"><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
@@ -60,11 +62,11 @@
           </nav>
     <div class="cs-foot">
       <span class="who">테스트 관리자</span>
-                  <form method="post" action="/inpulselink-preview/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="2e4132c8a8120f80a62051d53e3442b5"><button class="as-link">로그아웃</button></form>
+                  <form method="post" action="/inpulselink-preview/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="bdb7c211834a7915c26ad6624a65666c"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
-                    <div class="cs-hd"><div><h1>출금</h1><p class="sub">이체는 은행에서 직접 하고, 끝난 건만 "이체 완료"로 표시하세요. 원천징수 신고(사업소득 간이지급명세서)는 매월 세무 대리인에게 CSV를 넘기세요.</p></div>
+                    <div class="cs-hd"><div><h1>출금</h1><p class="sub">이체는 은행에서 직접 하고, 끝난 건만 "이체 완료"로 표시하세요. 원천징수 신고(사업소득 간이지급명세서)는 매월 세무 대리인에게 CSV를 넘기세요. 사업자 총판은 원천징수 없이, 세금계산서를 받은 건만 이체 완료로 바뀌어요.</p></div>
   <a class="btn btn-sm" href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/csv/?status=requested">CSV 내려받기</a></div>
 <div class="tabbar"><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/" class="on">인플루언서 출금</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?kind=refund" class="">광고주 예치금 환불</a></div>
 <div class="tabbar"><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=requested" class="on">처리 대기</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=paid" class="">이체 완료</a><a href="/inpulselink-preview/inpulselink-preview/ops/withdrawals/?status=rejected" class="">반려·취소</a></div>
@@ -73,7 +75,7 @@
   </main>
 </div>
 <script src="/inpulselink-preview/assets/app.js?v=4" defer></script>
-<div class="pv-note" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#21201c;color:#fdfdfc;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 버튼은 동작하지 않아요 · 관리 화면 <a href="/inpulselink-preview/biz/" style="color:#bdee63">광고주</a><a href="/inpulselink-preview/my/" style="color:#bdee63">인플루언서</a><a href="/inpulselink-preview/ops/" style="color:#bdee63">운영자</a><button type="button" aria-label="닫기" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;border-radius:50%;background:#bdee63;color:#21201c;text-align:center;line-height:22px;font-weight:800">×</button></div>
+<div class="pv-note" style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#21201c;color:#fdfdfc;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 버튼은 동작하지 않아요 · 관리 화면 <a href="/inpulselink-preview/biz/" style="color:#bdee63">광고주</a><a href="/inpulselink-preview/my/" style="color:#bdee63">인플루언서</a><a href="/inpulselink-preview/my/reseller/" style="color:#bdee63">총판</a><a href="/inpulselink-preview/ops/" style="color:#bdee63">운영자</a><button type="button" aria-label="닫기" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;border-radius:50%;background:#bdee63;color:#21201c;text-align:center;line-height:22px;font-weight:800">×</button></div>
 <script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 로그인·신청·저장이 동작하지 않아요.');},true);</script>
 </body>
 </html>
