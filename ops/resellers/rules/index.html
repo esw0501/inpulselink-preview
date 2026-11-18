@@ -37,7 +37,7 @@
               <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
               <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
               <a href="/inpulselink-preview/ops/settings/" class=""><span>설정·점검</span></a>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="a56af91288968ea4353686d92c3af7c8"><button><span>로그아웃</span></button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -62,7 +62,7 @@
           </nav>
     <div class="cs-foot">
       <span class="who">테스트 관리자</span>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="a56af91288968ea4353686d92c3af7c8"><button class="as-link">로그아웃</button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
@@ -72,7 +72,7 @@
 <div class="card" style="max-width:720px">
   <h2>요율과 자동 승급 기준</h2>
   <p class="small muted" style="margin:0 0 12px">수수료는 소속 인플루언서의 원고료에서 나와요. 여기서 바꾼 값은 다음 지급부터 바로 적용돼요. 총판에게 불리하게 바꿀 때는 약관에 따라 14일 전에 알려야 해요. 한 총판만 다르게 주려면 "활동 중" 목록에서 개별 요율을 넣으세요.</p>
-  <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="a56af91288968ea4353686d92c3af7c8"><input type="hidden" name="action" value="rules">
+  <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="b727df6ae2ca10e3d855f7d258b361b9"><input type="hidden" name="action" value="rules">
     <div class="tbl-wrap"><table class="tbl">
       <thead><tr><th>등급</th><th>요율(%)</th><th>소속 인원(명 이상)</th><th>최근 30일 정산 합계(원 이상)</th><th>끌어올리기(월, 명)</th></tr></thead>
       <tbody>
@@ -81,10 +81,11 @@
         <tr><td style="white-space:nowrap"><b>골드</b></td><td><input class="in" name="rate_gold" value="10" inputmode="decimal" style="width:90px"></td><td><input class="in" name="reseller_gold_members" value="30" inputmode="numeric" style="width:90px"></td><td><input class="in" name="reseller_gold_amount" value="10,000,000" inputmode="numeric" style="width:150px"></td><td><input class="in" name="reseller_boost_gold" value="5" inputmode="numeric" style="width:80px"></td></tr>
       </tbody>
     </table></div>
+    <div class="field" style="max-width:320px"><label>광고주 소개 수수료(구독료의 %)</label><input class="in" name="rate_brand" value="0" inputmode="decimal"><span class="hint">총판이 데려온 광고주가 구독료를 낼 때 총판에게 주는 비율. 회사 매출에서 나가요. 0이면 소개 기록만 남겨요.</span></div>
     <div class="field" style="max-width:320px"><label>바닥 요율(%)</label><input class="in" name="rate_floor" value="3" inputmode="decimal"><span class="hint">기본 등급 총판이 프로필을 60일 넘게 갱신하지 않은 인플루언서에게 적용</span></div>
     <div><button class="btn btn-ink">저장</button></div>
   </form>
-  <p class="small muted" style="margin-top:12px">등급은 매달 1일에 최근 30일 실적으로 자동 계산해요(하위 총판 실적 포함). 운영자가 "고정"한 총판과 개별 요율을 준 총판은 자동 계산이 바꾸지 않아요.</p>
+  <p class="small muted" style="margin-top:12px">등급은 매달 1일에 최근 30일 실적으로 자동 계산해요(대리점 실적 포함). 운영자가 "고정"한 총판과 개별 요율을 준 총판은 자동 계산이 바꾸지 않아요.</p>
 </div>
 
   </main>
