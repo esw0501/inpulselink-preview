@@ -32,12 +32,12 @@
               <a href="/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><b>2</b></a>
               <a href="/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
               <a href="/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><b>1</b></a>
-              <a href="/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
+              <a href="/inpulselink-preview/ops/plans/" class=""><span>캠페인 패키지</span></a>
               <a href="/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
               <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
               <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
               <a href="/inpulselink-preview/ops/settings/" class=""><span>설정·점검</span></a>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><button><span>로그아웃</span></button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -54,7 +54,7 @@
                       <a href="/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
                       <a href="/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
-              <div class="gap"></div>                <a href="/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
+              <div class="gap"></div>                <a href="/inpulselink-preview/ops/plans/" class=""><span>캠페인 패키지</span></a>
                       <a href="/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
               <div class="gap"></div>                <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
                       <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
@@ -62,47 +62,37 @@
           </nav>
     <div class="cs-foot">
       <span class="who">테스트 관리자</span>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><button class="as-link">로그아웃</button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
-                    <div class="cs-hd"><div><h1>총판</h1><p class="sub">총판은 직속·하위 모두 여기서 승인해야 시작돼요. 등급과 요율을 직접 정하고, 인플루언서가 아닌 사람에게 총판 계정을 내려 줄 수도 있어요.</p></div></div>
-<div class="tabbar"><a href="/inpulselink-preview/ops/resellers/requested/" class="">신청</a><a href="/inpulselink-preview/ops/resellers/active/" class="on">활동 중</a><a href="/inpulselink-preview/ops/resellers/flags/" class="">살펴볼 거래</a><a href="/inpulselink-preview/ops/resellers/issue/" class="">계정 내려 주기</a><a href="/inpulselink-preview/ops/resellers/rules/" class="">요율·등급 기준</a><a href="/inpulselink-preview/ops/resellers/ended/" class="">끝남</a><a href="/inpulselink-preview/ops/resellers/rejected/" class="">반려</a></div>
+                    <div class="cs-hd"><div><h1>총판</h1><p class="sub">총판은 여기서 승인해야 시작돼요. 단계는 하나뿐이고(총판 → 인플루언서), 총판 몫은 "수수료 비율"에서 정해요.</p></div></div>
+<div class="tabbar"><a href="/inpulselink-preview/ops/resellers/requested/" class="">신청</a><a href="/inpulselink-preview/ops/resellers/active/" class="on">활동 중</a><a href="/inpulselink-preview/ops/resellers/flags/" class="">살펴볼 거래</a><a href="/inpulselink-preview/ops/resellers/issue/" class="">계정 내려 주기</a><a href="/inpulselink-preview/ops/resellers/rules/" class="">수수료 비율</a><a href="/inpulselink-preview/ops/resellers/ended/" class="">끝남</a><a href="/inpulselink-preview/ops/resellers/rejected/" class="">반려</a></div>
 
 <div class="card">
     <div class="tbl-wrap"><table class="tbl">
-    <thead><tr><th>총판</th><th>구분</th><th>코드</th><th class="num">소속 인원</th><th class="num">30일 수수료</th><th class="num">누적</th><th>등급 · 요율 조정</th></tr></thead>
+    <thead><tr><th>총판</th><th>구분</th><th>코드</th><th class="num">소속 인원</th><th class="num">30일 수수료</th><th class="num">누적</th><th>관리</th></tr></thead>
     <tbody>      <tr>
-        <td class="nm"><a href="/inpulselink-preview/ops/users/22/"><b>소현가이드</b></a><div class="small muted">inf14@demo.test · 개인</div></td>
-        <td style="white-space:nowrap"><span class="bdg bdg-ink">직속</span> <span class="small muted">기본 · 5%</span></td>
-        <td class="mono" style="white-space:nowrap">RE9C6C7</td>
-        <td class="num">2</td><td class="num">0</td><td class="num">0</td>
+        <td class="nm"><a href="/inpulselink-preview/ops/users/17/"><b>반달토끼</b></a><div class="small muted">inf9@demo.test · 개인</div></td>
+        <td style="white-space:nowrap"><span class="bdg bdg-ink">총판</span> <span class="small muted"> · 10%</span></td>
+        <td class="mono" style="white-space:nowrap">R245633</td>
+        <td class="num">1</td><td class="num">0</td><td class="num">0</td>
         <td>
-                                  <form method="post" class="inline-form" style="margin-bottom:6px"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="tier"><input type="hidden" name="id" value="22">
-              <select class="in" name="tier" style="height:36px;width:92px"><option value="basic" selected>기본</option><option value="silver" >실버</option><option value="gold" >골드</option></select>
-              <label class="small"><input type="checkbox" name="lock" value="1" > 고정</label><button class="btn btn-sm">등급 저장</button></form>
-                        <form method="post" class="inline-form" style="margin-bottom:6px"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="rate"><input type="hidden" name="id" value="22">
-              <input class="in" name="rate" value="" placeholder="개별 요율 %" inputmode="decimal" style="width:110px;height:36px">
-              <button class="btn btn-sm">요율 저장</button></form>
-            <details class="fold"><summary class="small">자격 끝내기</summary><form method="post" class="inline-form" data-confirm="소현가이드의 총판 자격을 끝낼까요? 소속 인플루언서 2명은 총판 없는 회원이 되고, 대리점은 본사 직속이 돼요."><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="end"><input type="hidden" name="id" value="22"><input class="in" name="reason" placeholder="사유" required><button class="btn btn-sm">끝내기</button></form></details>
+                                  <details class="fold"><summary class="small">자격 끝내기</summary><form method="post" class="inline-form" data-confirm="반달토끼의 총판 자격을 끝낼까요? 소속 인플루언서 1명은 총판 없는 회원이 되고, 대리점은 본사 직속이 돼요."><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><input type="hidden" name="action" value="end"><input type="hidden" name="id" value="17"><input class="in" name="reason" placeholder="사유" required><button class="btn btn-sm">끝내기</button></form></details>
           </td>
       </tr>
           <tr>
-        <td class="nm"><a href="/inpulselink-preview/ops/users/17/"><b>반달토끼</b></a><div class="small muted">inf9@demo.test · 개인</div></td>
-        <td style="white-space:nowrap"><span class="bdg">하위</span> <span class="small muted">소현가이드 밑 · 4%</span>
-          </td>
-        <td class="mono" style="white-space:nowrap">R19017B</td>
-        <td class="num">1</td><td class="num">0</td><td class="num">0</td>
+        <td class="nm"><a href="/inpulselink-preview/ops/users/22/"><b>소현가이드</b></a><div class="small muted">inf14@demo.test · 개인</div></td>
+        <td style="white-space:nowrap"><span class="bdg bdg-ink">총판</span> <span class="small muted"> · 10%</span></td>
+        <td class="mono" style="white-space:nowrap">RE82F75</td>
+        <td class="num">2</td><td class="num">0</td><td class="num">0</td>
         <td>
-                                  <form method="post" class="inline-form" style="margin-bottom:6px"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="rate"><input type="hidden" name="id" value="17">
-              <input class="in" name="rate" value="4" placeholder="하위 몫 %" inputmode="decimal" style="width:110px;height:36px">
-              <button class="btn btn-sm">몫 저장</button></form>
-            <details class="fold"><summary class="small">자격 끝내기</summary><form method="post" class="inline-form" data-confirm="반달토끼의 총판 자격을 끝낼까요? 소속 인플루언서 1명은 총판 없는 회원이 되고, 대리점은 본사 직속이 돼요."><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="end"><input type="hidden" name="id" value="17"><input class="in" name="reason" placeholder="사유" required><button class="btn btn-sm">끝내기</button></form></details>
+                                  <details class="fold"><summary class="small">자격 끝내기</summary><form method="post" class="inline-form" data-confirm="소현가이드의 총판 자격을 끝낼까요? 소속 인플루언서 2명은 총판 없는 회원이 되고, 대리점은 본사 직속이 돼요."><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><input type="hidden" name="action" value="end"><input type="hidden" name="id" value="22"><input class="in" name="reason" placeholder="사유" required><button class="btn btn-sm">끝내기</button></form></details>
           </td>
       </tr>
     </tbody>
   </table></div>
-  <p class="small muted" style="margin:12px 0 0">등급을 "고정"하면 매달 자동 계산이 바꾸지 않아요. 개별 요율을 넣으면 등급 요율 대신 그 요율이 적용되고, 비우고 저장하면 등급 요율로 돌아가요. 요율이 바뀌면 그 총판의 소속 인플루언서에게 알림이 가요.</p>  </div>
+    </div>
   </main>
 </div>
 <script src="/inpulselink-preview/assets/app.js?v=4" defer></script>

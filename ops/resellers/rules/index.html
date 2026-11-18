@@ -32,12 +32,12 @@
               <a href="/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><b>2</b></a>
               <a href="/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
               <a href="/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><b>1</b></a>
-              <a href="/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
+              <a href="/inpulselink-preview/ops/plans/" class=""><span>캠페인 패키지</span></a>
               <a href="/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
               <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
               <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
               <a href="/inpulselink-preview/ops/settings/" class=""><span>설정·점검</span></a>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><button><span>로그아웃</span></button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -54,7 +54,7 @@
                       <a href="/inpulselink-preview/ops/inquiries/" class=""><span>CS 문의</span><span class="n">2</span></a>
                       <a href="/inpulselink-preview/ops/withdrawals/" class=""><span>출금·환불</span></a>
                       <a href="/inpulselink-preview/ops/deposits/" class=""><span>입금 확인</span><span class="n">1</span></a>
-              <div class="gap"></div>                <a href="/inpulselink-preview/ops/plans/" class=""><span>구독·요금제</span></a>
+              <div class="gap"></div>                <a href="/inpulselink-preview/ops/plans/" class=""><span>캠페인 패키지</span></a>
                       <a href="/inpulselink-preview/ops/stats/" class=""><span>매출 통계</span></a>
               <div class="gap"></div>                <a href="/inpulselink-preview/ops/invites/" class=""><span>초대 코드</span></a>
                       <a href="/inpulselink-preview/ops/notices/" class=""><span>공지사항</span></a>
@@ -62,30 +62,29 @@
           </nav>
     <div class="cs-foot">
       <span class="who">테스트 관리자</span>
-                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><button class="as-link">로그아웃</button></form>
+                  <form method="post" action="/inpulselink-preview/ops/logout/"><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
-                    <div class="cs-hd"><div><h1>총판</h1><p class="sub">총판은 직속·하위 모두 여기서 승인해야 시작돼요. 등급과 요율을 직접 정하고, 인플루언서가 아닌 사람에게 총판 계정을 내려 줄 수도 있어요.</p></div></div>
-<div class="tabbar"><a href="/inpulselink-preview/ops/resellers/requested/" class="">신청</a><a href="/inpulselink-preview/ops/resellers/active/" class="">활동 중</a><a href="/inpulselink-preview/ops/resellers/flags/" class="">살펴볼 거래</a><a href="/inpulselink-preview/ops/resellers/issue/" class="">계정 내려 주기</a><a href="/inpulselink-preview/ops/resellers/rules/" class="on">요율·등급 기준</a><a href="/inpulselink-preview/ops/resellers/ended/" class="">끝남</a><a href="/inpulselink-preview/ops/resellers/rejected/" class="">반려</a></div>
+                    <div class="cs-hd"><div><h1>총판</h1><p class="sub">총판은 여기서 승인해야 시작돼요. 단계는 하나뿐이고(총판 → 인플루언서), 총판 몫은 "수수료 비율"에서 정해요.</p></div></div>
+<div class="tabbar"><a href="/inpulselink-preview/ops/resellers/requested/" class="">신청</a><a href="/inpulselink-preview/ops/resellers/active/" class="">활동 중</a><a href="/inpulselink-preview/ops/resellers/flags/" class="">살펴볼 거래</a><a href="/inpulselink-preview/ops/resellers/issue/" class="">계정 내려 주기</a><a href="/inpulselink-preview/ops/resellers/rules/" class="on">수수료 비율</a><a href="/inpulselink-preview/ops/resellers/ended/" class="">끝남</a><a href="/inpulselink-preview/ops/resellers/rejected/" class="">반려</a></div>
 
 <div class="card" style="max-width:720px">
-  <h2>요율과 자동 승급 기준</h2>
-  <p class="small muted" style="margin:0 0 12px">수수료는 소속 인플루언서의 원고료에서 나와요. 여기서 바꾼 값은 다음 지급부터 바로 적용돼요. 총판에게 불리하게 바꿀 때는 약관에 따라 14일 전에 알려야 해요. 한 총판만 다르게 주려면 "활동 중" 목록에서 개별 요율을 넣으세요.</p>
-  <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="6b9f5bbaad8a61ed6c9ce912c6f52563"><input type="hidden" name="action" value="rules">
+  <h2>수수료 비율</h2>
+  <p class="small muted" style="margin:0 0 12px">캠페인 원고료에서 플랫폼 쪽으로 나누는 비율이에요. 세 비율의 합은 <b>30%</b>를 넘을 수 없고, 나머지가 인플루언서의 기본 원고료예요. 저장하면 다음 승인 건부터 적용돼요(이미 맺은 계약서의 안내 금액은 그대로 남아요).</p>
+  <form method="post" class="form" style="gap:12px"><input type="hidden" name="_csrf" value="6c319d1f9c3909977aaccbb160a2f281"><input type="hidden" name="action" value="fees">
     <div class="tbl-wrap"><table class="tbl">
-      <thead><tr><th>등급</th><th>요율(%)</th><th>소속 인원(명 이상)</th><th>최근 30일 정산 합계(원 이상)</th><th>끌어올리기(월, 명)</th></tr></thead>
+      <thead><tr><th>받는 쪽</th><th>비율(%)</th><th>언제</th></tr></thead>
       <tbody>
-        <tr><td style="white-space:nowrap"><b>기본</b></td><td><input class="in" name="rate_basic" value="5" inputmode="decimal" style="width:90px"></td><td class="muted">가입 직후</td><td class="muted">-</td><td><input class="in" name="reseller_boost_basic" value="1" inputmode="numeric" style="width:80px"></td></tr>
-        <tr><td style="white-space:nowrap"><b>실버</b></td><td><input class="in" name="rate_silver" value="7" inputmode="decimal" style="width:90px"></td><td><input class="in" name="reseller_silver_members" value="10" inputmode="numeric" style="width:90px"></td><td><input class="in" name="reseller_silver_amount" value="3,000,000" inputmode="numeric" style="width:150px"></td><td><input class="in" name="reseller_boost_silver" value="3" inputmode="numeric" style="width:80px"></td></tr>
-        <tr><td style="white-space:nowrap"><b>골드</b></td><td><input class="in" name="rate_gold" value="10" inputmode="decimal" style="width:90px"></td><td><input class="in" name="reseller_gold_members" value="30" inputmode="numeric" style="width:90px"></td><td><input class="in" name="reseller_gold_amount" value="10,000,000" inputmode="numeric" style="width:150px"></td><td><input class="in" name="reseller_boost_gold" value="5" inputmode="numeric" style="width:80px"></td></tr>
+        <tr><td><b>본사</b></td><td><input class="in" name="hq" value="15" inputmode="decimal" style="width:90px" required></td><td class="small muted">항상</td></tr>
+        <tr><td><b>총판</b></td><td><input class="in" name="reseller" value="10" inputmode="decimal" style="width:90px" required></td><td class="small muted">총판 소속 인플루언서의 캠페인, 총판 본인의 캠페인. 총판이 없으면 본사 수익</td></tr>
+        <tr><td><b>인플루언서 추가 몫</b></td><td><input class="in" name="bonus" value="5" inputmode="decimal" style="width:90px" required></td><td class="small muted">아래 "지급"을 켰을 때만. 꺼 두면 본사 수익</td></tr>
       </tbody>
     </table></div>
-    <div class="field" style="max-width:320px"><label>광고주 소개 수수료(구독료의 %)</label><input class="in" name="rate_brand" value="0" inputmode="decimal"><span class="hint">총판이 데려온 광고주가 구독료를 낼 때 총판에게 주는 비율. 회사 매출에서 나가요. 0이면 소개 기록만 남겨요.</span></div>
-    <div class="field" style="max-width:320px"><label>바닥 요율(%)</label><input class="in" name="rate_floor" value="3" inputmode="decimal"><span class="hint">기본 등급 총판이 프로필을 60일 넘게 갱신하지 않은 인플루언서에게 적용</span></div>
+    <label class="agree"><input type="checkbox" name="bonus_on" value="1" > <span>인플루언서 추가 몫을 지급합니다. 성과 기준이 아직 정해지지 않아 꺼 두었어요. 켜면 <b>모든 승인 건</b>에 지급돼요.</span></label>
+    <p class="small muted">지금 합 <b>30%</b> / 상한 30% · 원고료 100,000원 기준: 인플루언서 70,000원 · 총판 10,000원 · 본사 20,000원</p>
     <div><button class="btn btn-ink">저장</button></div>
   </form>
-  <p class="small muted" style="margin-top:12px">등급은 매달 1일에 최근 30일 실적으로 자동 계산해요(대리점 실적 포함). 운영자가 "고정"한 총판과 개별 요율을 준 총판은 자동 계산이 바꾸지 않아요.</p>
 </div>
 
   </main>
