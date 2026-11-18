@@ -597,3 +597,57 @@ html.lenis, html.lenis body { height: auto; }
 .social-or { display: flex; align-items: center; gap: 12px; margin: 0 0 4px; font-size: 13px; color: var(--mute); }
 .social-or::before, .social-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
+/* ===== 홈: 장터형(2026-11-18) — 설명보다 실제 인플루언서·캠페인이 먼저 ===== */
+.mk-top { padding: 40px 0 24px; border-bottom: 1px solid var(--line); }
+.mk-hd { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.mk-hd h1 { font-size: 32px; line-height: 1.25; font-weight: 800; letter-spacing: -0.035em; }
+.mk-replay { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: none; color: var(--sub); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.mk-replay:hover { border-color: var(--ink); color: var(--ink); }
+.mk-replay svg { width: 10px; height: 10px; }
+.mk-search { display: grid; grid-template-columns: 160px minmax(0, 1fr) 96px; gap: 8px; margin-top: 20px; max-width: 760px; }
+.mk-search .in, .mk-search .btn { height: 52px; font-size: 16px; }
+.mk-cats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.mk-first { padding-top: 32px; }
+.mk-ai { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) auto; align-items: center; gap: 24px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mk-ai-q { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.mk-ai-q .lb2 { font-size: 12px; font-weight: 700; color: var(--lime-tx); }
+.mk-ai-q b { font-size: 18px; line-height: 1.4; font-weight: 800; letter-spacing: -0.02em; }
+.mk-ai-q .small { font-size: 13px; color: var(--sub); }
+.mk-ai-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.mk-ai-list li { display: grid; grid-template-columns: 16px auto minmax(0, 1fr); align-items: center; gap: 12px; }
+.mk-ai-list li > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.mk-ai-list a { color: var(--ink); }
+.mk-ai-list li > div > span { font-size: 13px; color: var(--sub); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mk-ai-no { font-size: 13px; font-weight: 800; color: var(--sub); font-variant-numeric: tabular-nums; }
+.mk-note { margin-top: 8px; font-size: 13px; color: var(--sub); }
+.mk-info { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+.mk-info h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; }
+.mk-rows { margin: 16px 0; }
+.mk-rows > div { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.mk-rows > div:first-child { border-top: 1px solid var(--line); }
+.mk-rows dt { font-weight: 700; }
+.mk-rows dd { margin: 0; color: var(--sub); font-size: 15px; }
+.mk-price dd { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.mk-price dd span { margin-left: 8px; font-weight: 500; font-size: 13px; color: var(--sub); }
+.mk-start { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.mk-start a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px; border-radius: var(--radius); color: var(--ink); background: var(--soft); }
+.mk-start a:first-child { background: var(--lime); color: var(--on-lime); }
+.mk-start b { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+.mk-start span { font-size: 14px; font-weight: 700; white-space: nowrap; }
+@media (max-width: 960px) {
+  .mk-ai { grid-template-columns: 1fr; gap: 16px; }
+  .mk-info { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 560px) {
+  .mk-top { padding: 24px 0 20px; }
+  .mk-hd { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .mk-hd h1 { font-size: 26px; }
+  .mk-search { grid-template-columns: minmax(0, 1fr) 80px; }
+  .mk-search select { grid-column: 1 / -1; }
+  .mk-cats { flex-wrap: nowrap; overflow-x: auto; margin-right: calc(var(--gut) * -1); padding-right: var(--gut); scrollbar-width: none; }
+  .mk-cats::-webkit-scrollbar { display: none; }
+  .mk-cats .chip { flex: none; }
+  .mk-rows > div { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; }
+  .mk-start { grid-template-columns: 1fr; }
+  .mk-start a { flex-direction: column; align-items: flex-start; gap: 8px; }
+}

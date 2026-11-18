@@ -8,7 +8,7 @@
 <title>예치금 | 광고주 센터 | 인펄스링크</title>
 <link rel="icon" href="/inpulselink-preview/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=21">
+<link rel="stylesheet" href="/inpulselink-preview/assets/style.css?v=22">
 <link rel="stylesheet" href="/inpulselink-preview/assets/console.css?v=17">
 </head>
 <body>
@@ -35,7 +35,7 @@
               <a href="/inpulselink-preview/biz/wallet/" class="on"><span>예치금</span></a>
               <a href="/inpulselink-preview/biz/profile/" class=""><span>회사 정보</span></a>
               <a href="/inpulselink-preview/biz/support/" class=""><span>고객센터</span></a>
-            <a href="/inpulselink-preview/"><span>사이트로 가기</span></a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="a65754bf5142b9d0bc492b1f90e468cd"><button><span>로그아웃</span></button></form>
+            <a href="/inpulselink-preview/"><span>사이트로 가기</span></a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="745b41c40e13865ed40a317387985b0c"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -58,7 +58,7 @@
           </nav>
     <div class="cs-foot">
       <span class="who">콩콩푸드랩</span>
-            <a href="/inpulselink-preview/">사이트로 가기</a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="a65754bf5142b9d0bc492b1f90e468cd"><button class="as-link">로그아웃</button></form>
+            <a href="/inpulselink-preview/">사이트로 가기</a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="745b41c40e13865ed40a317387985b0c"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
@@ -67,7 +67,7 @@
   <div class="card">
     <h2>카드로 충전 <span class="small muted">바로 반영</span></h2>
     <div class="callout small" style="margin-bottom:12px">결제 키가 설정되지 않아 <b>모의 결제</b>로 동작합니다(로컬 테스트 전용). 운영 전 토스페이먼츠 키를 .env에 넣어야 해요.</div>    <form method="post" class="form" style="gap:12px">
-      <input type="hidden" name="_csrf" value="a65754bf5142b9d0bc492b1f90e468cd"><input type="hidden" name="action" value="card">
+      <input type="hidden" name="_csrf" value="745b41c40e13865ed40a317387985b0c"><input type="hidden" name="action" value="card">
       <div class="checks" data-amount-presets>
         <label><input type="radio" name="preset" value="100000"> 10만원</label><label><input type="radio" name="preset" value="300000"> 30만원</label><label><input type="radio" name="preset" value="500000"> 50만원</label><label><input type="radio" name="preset" value="1000000"> 100만원</label>      </div>
       <div class="field"><label>충전 금액(원)</label><input class="in" name="amount" inputmode="numeric" value="100000" required><span class="hint">1만원 ~ 1,000만원, 1,000원 단위</span></div>
@@ -82,7 +82,7 @@
 <div class="card" id="refund"><h2>예치금 환불 <span class="small muted">남은 예치금을 계좌로 돌려받기</span></h2>
       <details class="fold"><summary>환불 신청하기</summary>
     <form method="post" class="form" style="gap:12px;margin-top:12px;max-width:520px">
-      <input type="hidden" name="_csrf" value="a65754bf5142b9d0bc492b1f90e468cd"><input type="hidden" name="action" value="refund">
+      <input type="hidden" name="_csrf" value="745b41c40e13865ed40a317387985b0c"><input type="hidden" name="action" value="refund">
       <div class="field"><label>환불할 금액(원)</label><input class="in" name="refund_amount" inputmode="numeric" value="250000" required><span class="hint">지금 잔액 250,000원까지. 캠페인에 묶인 금액은 캠페인이 끝나야 돌아와요.</span></div>
       <div class="row2">
         <div class="field"><label>은행</label><input class="in" name="bank_name" required maxlength="30"></div>
@@ -96,7 +96,7 @@
     </div>
 <div class="card"><h2>예치금 내역</h2>
     <div class="tbl-wrap"><table class="tbl"><thead><tr><th>일시</th><th>구분</th><th>내용</th><th class="num">변동</th><th class="num">잔액</th></tr></thead><tbody>
-  <tr><td>2026-11-18 13:52</td><td>캠페인 비용</td><td class="small">캠페인 #8 비건 쿠키 신제품 릴스 풀케어 캠페인</td><td class="num minus">-700,000</td><td class="num">250,000</td></tr><tr><td>2026-11-18 13:52</td><td>캠페인 비용</td><td class="small">캠페인 #4 성수 콩콩카페 2인 디저트 세트 방문 체험</td><td class="num minus">-60,000</td><td class="num">950,000</td></tr><tr><td>2026-11-18 13:52</td><td>캠페인 비용</td><td class="small">캠페인 #1 발효 콩크림 단호박 신제품 출시 전 체험단</td><td class="num minus">0</td><td class="num">1,010,000</td></tr><tr><td>2026-11-18 13:52</td><td>구독료</td><td class="small">프로 연 결제 (2026-11-18~2027-11-17)</td><td class="num minus">-1,990,000</td><td class="num">1,010,000</td></tr><tr><td>2026-11-18 13:52</td><td>예치금 충전</td><td class="small">샘플 충전</td><td class="num plus">+3,000,000</td><td class="num">3,000,000</td></tr>  </tbody></table></div>
+  <tr><td>2026-11-18 14:04</td><td>캠페인 비용</td><td class="small">캠페인 #8 비건 쿠키 신제품 릴스 풀케어 캠페인</td><td class="num minus">-700,000</td><td class="num">250,000</td></tr><tr><td>2026-11-18 14:04</td><td>캠페인 비용</td><td class="small">캠페인 #4 성수 콩콩카페 2인 디저트 세트 방문 체험</td><td class="num minus">-60,000</td><td class="num">950,000</td></tr><tr><td>2026-11-18 14:04</td><td>캠페인 비용</td><td class="small">캠페인 #1 발효 콩크림 단호박 신제품 출시 전 체험단</td><td class="num minus">0</td><td class="num">1,010,000</td></tr><tr><td>2026-11-18 14:04</td><td>구독료</td><td class="small">프로 연 결제 (2026-11-18~2027-11-17)</td><td class="num minus">-1,990,000</td><td class="num">1,010,000</td></tr><tr><td>2026-11-18 14:04</td><td>예치금 충전</td><td class="small">샘플 충전</td><td class="num plus">+3,000,000</td><td class="num">3,000,000</td></tr>  </tbody></table></div>
     </div>
   </main>
 </div>
