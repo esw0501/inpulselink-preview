@@ -35,7 +35,7 @@
               <a href="/inpulselink-preview/biz/wallet/" class="on"><span>결제 내역</span></a>
               <a href="/inpulselink-preview/biz/profile/" class=""><span>회사 정보</span></a>
               <a href="/inpulselink-preview/biz/support/" class=""><span>고객센터</span></a>
-            <a href="/inpulselink-preview/"><span>사이트로 가기</span></a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="1c4f2d0eeccbcecf1a73df16754338d0"><button><span>로그아웃</span></button></form>
+            <a href="/inpulselink-preview/"><span>사이트로 가기</span></a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="3a2c50590f15c16db9da448a8a0de56e"><button><span>로그아웃</span></button></form>
     </div>
   </details>
 </nav>
@@ -58,29 +58,33 @@
           </nav>
     <div class="cs-foot">
       <span class="who">콩콩푸드랩</span>
-            <a href="/inpulselink-preview/">사이트로 가기</a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="1c4f2d0eeccbcecf1a73df16754338d0"><button class="as-link">로그아웃</button></form>
+            <a href="/inpulselink-preview/">사이트로 가기</a>      <form method="post" action="/inpulselink-preview/logout/"><input type="hidden" name="_csrf" value="3a2c50590f15c16db9da448a8a0de56e"><button class="as-link">로그아웃</button></form>
     </div>
   </aside>
   <main class="cs-main">
-                    <div class="cs-hd"><div><h1>결제 내역</h1><p class="sub">미리 충전하지 않아요. 인플루언서를 선정할 때 그 금액만 결제하고, 승인되지 않은 건은 여기 잔액으로 돌아와요. 잔액은 다음 결제에 먼저 쓰이고 환불도 신청할 수 있어요.</p></div><div class="stat dark" style="min-width:220px"><span>돌려받을 수 있는 잔액</span><b>250,000원</b></div></div>
-<div class="card" id="refund"><h2>환불 신청 <span class="small muted">남은 잔액을 계좌로 돌려받기</span></h2>
+                    <div class="cs-hd"><div><h1>결제 내역</h1><p class="sub">미리 충전하지 않아요. 인플루언서를 선정할 때 원고료만 결제하고 카드 결제 수수료는 붙지 않아요. 승인되지 않은 건은 결제한 카드를 취소해 돌려드려요. 카드 취소가 안 되는 금액만 잔액에 남고, 계좌로 환불을 신청할 수 있어요.</p></div><div class="stat dark" style="min-width:220px"><span>돌려받을 수 있는 잔액</span><b>250,000원</b></div></div>
+<div class="card"><h2>잔액을 카드로 돌려받기</h2>
+  <p class="small muted" style="margin:0 0 12px">잔액 250,000원을 최근 카드 결제부터 취소해 돌려드려요. 결제한 지 1년이 지나 취소가 안 되는 금액은 아래 계좌 환불로 신청해 주세요.</p>
+  <form method="post" data-confirm="잔액을 결제한 카드로 돌려받을까요?"><input type="hidden" name="_csrf" value="3a2c50590f15c16db9da448a8a0de56e"><input type="hidden" name="action" value="card_back"><button class="btn btn-ink">카드로 돌려받기</button></form>
+</div>
+<div class="card" id="refund"><h2>계좌 환불 신청 <span class="small muted">카드 취소가 안 되는 잔액을 계좌로</span></h2>
       <details class="fold"><summary>환불 신청하기</summary>
     <form method="post" class="form" style="gap:12px;margin-top:12px;max-width:520px">
-      <input type="hidden" name="_csrf" value="1c4f2d0eeccbcecf1a73df16754338d0"><input type="hidden" name="action" value="refund">
+      <input type="hidden" name="_csrf" value="3a2c50590f15c16db9da448a8a0de56e"><input type="hidden" name="action" value="refund">
       <div class="field"><label>환불할 금액(원)</label><input class="in" name="refund_amount" inputmode="numeric" value="250000" required><span class="hint">지금 잔액 250,000원까지. 캠페인에 묶인 금액은 캠페인이 끝나야 돌아와요.</span></div>
       <div class="row2">
         <div class="field"><label>은행</label><input class="in" name="bank_name" required maxlength="30"></div>
         <div class="field"><label>예금주</label><input class="in" name="bank_holder" required maxlength="30"></div>
       </div>
       <div class="field"><label>계좌번호</label><input class="in mono" name="bank_account" inputmode="numeric" required maxlength="40"></div>
-      <p class="fee-line" style="margin:0">신청하면 그 금액이 예치금에서 먼저 빠지고, 운영자가 확인한 뒤 이체해요. 카드로 결제할 때 낸 결제 수수료(3.3%)는 환불되지 않아요.</p>
+      <p class="fee-line" style="margin:0">신청하면 그 금액이 잔액에서 먼저 빠지고, 운영자가 확인한 뒤 이체해요.</p>
       <div><button class="btn btn-ink">환불 신청</button></div>
     </form>
   </details>
     </div>
 <div class="card"><h2>잔액 내역</h2>
     <div class="tbl-wrap"><table class="tbl"><thead><tr><th>일시</th><th>구분</th><th>내용</th><th class="num">변동</th><th class="num">잔액</th></tr></thead><tbody>
-  <tr><td>2026-11-19 11:18</td><td>캠페인 비용</td><td class="small">캠페인 #8 비건 쿠키 신제품 릴스 풀케어 캠페인</td><td class="num minus">-700,000</td><td class="num">250,000</td></tr><tr><td>2026-11-19 11:18</td><td>캠페인 비용</td><td class="small">캠페인 #4 성수 콩콩카페 2인 디저트 세트 방문 체험</td><td class="num minus">-60,000</td><td class="num">950,000</td></tr><tr><td>2026-11-19 11:18</td><td>구독료</td><td class="small">프로 연 결제 (2026-11-19~2027-11-18)</td><td class="num minus">-1,990,000</td><td class="num">1,010,000</td></tr><tr><td>2026-11-19 11:18</td><td>예치금 충전</td><td class="small">샘플 충전</td><td class="num plus">+3,000,000</td><td class="num">3,000,000</td></tr>  </tbody></table></div>
+  <tr><td>2026-11-19 16:26</td><td>캠페인 비용</td><td class="small">캠페인 #8 비건 쿠키 신제품 릴스 풀케어 캠페인</td><td class="num minus">-700,000</td><td class="num">250,000</td></tr><tr><td>2026-11-19 16:26</td><td>캠페인 비용</td><td class="small">캠페인 #4 성수 콩콩카페 2인 디저트 세트 방문 체험</td><td class="num minus">-60,000</td><td class="num">950,000</td></tr><tr><td>2026-11-19 16:26</td><td>구독료</td><td class="small">프로 연 결제 (2026-11-19~2027-11-18)</td><td class="num minus">-1,990,000</td><td class="num">1,010,000</td></tr><tr><td>2026-11-19 16:26</td><td>예치금 충전</td><td class="small">샘플 충전</td><td class="num plus">+3,000,000</td><td class="num">3,000,000</td></tr>  </tbody></table></div>
     </div>
   </main>
 </div>

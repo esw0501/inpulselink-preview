@@ -55,6 +55,9 @@
       const fee = Math.max(Math.round(payout * feePct / 100), minFee);
       const total = (payout + fee) * num(val('recruit_count').value);
       out('payout', won(payout) + '원'); out('fee', won(fee) + '원'); out('total', won(total) + '원');
+      // v2: 이용료(원고료의 N%, 공개)를 뺀 인플루언서 수령액. 구매 환급액에는 이용료가 없다
+      const infBp = num(cf.dataset.platformBp), reward = num(val('reward_point').value);
+      if (infBp) { const pf = Math.floor(reward * infBp / 10000); out('platform', won(pf) + '원'); out('inf', won(price + reward - pf) + '원'); }
       out('short', total > balance ? `예치금이 ${won(total - balance)}원 부족해요. 임시 저장 후 충전하세요.` : '');
       const p = pkg();
       out('rec', !p || (!p.min && !p.max) ? '' : `${p.name} 권장 단가 ${p.label}` + (p.min && payout < p.min ? ' — 이보다 낮으면 지원이 적을 수 있어요(강제 아님)' : ''));
